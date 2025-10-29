@@ -1,9 +1,48 @@
-# 디렉토리 무시
-/build/
-/log/
-/install/
+# ========================
+#  Build artifacts
+# ========================
+build/
+install/
+log/
+*.log
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+*.cmake
 
-# Python 캐시 파일 무시
+# ========================
+#  ROS / colcon / rosbag
+# ========================
+.colcon/
+rosbag2_*/
+*.bag
+*.db3
+*.bag.active
+*.bag.tmp
+*.bag.yaml
+bags/
+recordings/
+rosbags/
+logs/
+launch/*.pyc
+
+# ========================
+#  IDE / Editor
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+
+# ========================
+#  Python / Env
+# ========================
+venv/
+.env/
+*.egg-info/
+dist/
+*.pkl

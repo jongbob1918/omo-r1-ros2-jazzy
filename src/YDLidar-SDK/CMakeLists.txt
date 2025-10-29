@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.5)
 project(ydlidar_sdk C CXX)
 
 #########################################################
@@ -78,7 +78,7 @@ find_package(SWIG)
 find_package(PythonInterp)
 find_package(PythonLibs)
 find_package(GTest)
-
+find_package(ament_cmake REQUIRED)
 ############################################################################
 # include headers
 include_directories(.)
@@ -197,10 +197,10 @@ include_directories(${CMAKE_BINARY_DIR} )
 
 ##################################################################################
 # make an uninstall target
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_uninstall.cmake.in)
-add_custom_target(uninstall
+if(NOT TARGET uninstall)
+  add_custom_target(uninstall
     COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
-
+endif()
 
 ########################################################
 ### make package or cpack -C CPackConfig.cmake
@@ -237,3 +237,7 @@ include(CPack)
 
 # Summary
 include(cmake/script_show_final_summary.cmake REQUIRED)
+
+ament_package()
+
+

@@ -86,3 +86,7 @@ endif()
 
 ament_package()
 
+#---------------------------------------------------------------------------------------
+# SDK dependency 연결
+ament_target_dependencies(${PROJECT_NAME}_node ydlidar_sdk)
+ament_target_dependencies(${PROJECT_NAME}_client ydlidar_sdk)
