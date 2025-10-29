@@ -37,6 +37,7 @@ amcl:
     z_max: 0.05
     z_rand: 0.5
     z_short: 0.05
+    scan_topic: scan_filtered
 
 amcl_map_client:
   ros__parameters:
@@ -92,11 +93,11 @@ controller_server:
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
       debug_trajectory_details: True
-      min_vel_x: -0.30
+      min_vel_x: -0.1
       min_vel_y: 0.0
-      max_vel_x: 0.30
+      max_vel_x: 0.2
       max_vel_y: 0.0
-      max_vel_theta: 3.4
+      max_vel_theta: 1.0
       min_speed_xy: 0.0
       max_speed_xy: 0.30
       min_speed_theta: 0.0
@@ -155,7 +156,7 @@ local_costmap:
         enabled: True
         observation_sources: scan
         scan:
-          topic: /scan
+          topic: scan_filtered
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -202,7 +203,7 @@ global_costmap:
         enabled: True
         observation_sources: scan
         scan:
-          topic: /scan
+          topic: scan_filtered
           max_obstacle_height: 2.0
           clearing: True
           marking: True
