@@ -1,6 +1,6 @@
 omo_r1_mcu_node:
   ros__parameters:
-    port.name: "/dev/ttyMCU"
+    port.name: "/dev/ttyMotor"
     port.baudrate: 115200
     motor.gear_ratio: 15.0
     motor.max_lin_vel_x: 0.6

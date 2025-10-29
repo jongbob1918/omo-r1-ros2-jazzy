@@ -1,9 +1,0 @@
-/home/mac/dev_ws/omo_robot/build/omo_r1_description/CMakeFiles/uninstall.dir
-/home/mac/dev_ws/omo_robot/build/omo_r1_description/CMakeFiles/omo_r1_description_uninstall.dir
-/home/mac/dev_ws/omo_robot/build/omo_r1_description/CMakeFiles/test.dir
-/home/mac/dev_ws/omo_robot/build/omo_r1_description/CMakeFiles/edit_cache.dir
-/home/mac/dev_ws/omo_robot/build/omo_r1_description/CMakeFiles/rebuild_cache.dir
-/home/mac/dev_ws/omo_robot/build/omo_r1_description/CMakeFiles/list_install_components.dir
-/home/mac/dev_ws/omo_robot/build/omo_r1_description/CMakeFiles/install.dir
-/home/mac/dev_ws/omo_robot/build/omo_r1_description/CMakeFiles/install/local.dir
-/home/mac/dev_ws/omo_robot/build/omo_r1_description/CMakeFiles/install/strip.dir

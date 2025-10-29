@@ -12,7 +12,7 @@ class OMOR1MiniMotorSettingNode(Node):
     super().__init__('omo_r1_motor_setting')
 
     # Get parameter values
-    _port_name = self.get_parameter_or('/port/name', Parameter('/port/name', Parameter.Type.STRING, '/dev/ttyMCU')).get_parameter_value().string_value
+    _port_name = self.get_parameter_or('/port/name', Parameter('/port/name', Parameter.Type.STRING, '/dev/ttyMotor')).get_parameter_value().string_value
     _port_baudrate = self.get_parameter_or('/port/baudrate', Parameter('/port/baudrate', Parameter.Type.INTEGER, 115200)).get_parameter_value().integer_value
 
     self.motor_gear_ratio = self.get_parameter_or('/motor/gear_ratio', Parameter('/motor/gear_ratio', Parameter.Type.INTEGER, 213)).get_parameter_value().integer_value

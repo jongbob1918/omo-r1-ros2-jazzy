@@ -1,5 +1,0 @@
-[0.037s] Invoking command in '/home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver -- -j16 -l16
-[0.156s] [ 50%] [32mBuilding CXX object CMakeFiles/ydlidar_ros2_driver_node.dir/src/ydlidar_ros2_driver_node.cpp.o[0m
-[0.156s] [ 75%] Built target ydlidar_ros2_driver_client
-[4.459s] [100%] [32m[1mLinking CXX executable ydlidar_ros2_driver_node[0m
-[4.620s] [100%] Built target ydlidar_ros2_driver_node
