@@ -1,0 +1,21 @@
+[0.039s] Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake /home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_gazebo -DCMAKE_INSTALL_PREFIX=/home/mac/dev_ws/omo_robot/install/omo_r1_gazebo
+[0.059s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.531s] [31mCMake Error at CMakeLists.txt:23 (find_package):
+[0.531s]   By not providing "Findgazebo_ros_pkgs.cmake" in CMAKE_MODULE_PATH this
+[0.531s]   project has asked CMake to find a package configuration file provided by
+[0.531s]   "gazebo_ros_pkgs", but CMake did not find one.
+[0.532s] 
+[0.532s]   Could not find a package configuration file provided by "gazebo_ros_pkgs"
+[0.532s]   with any of the following names:
+[0.532s] 
+[0.532s]     gazebo_ros_pkgsConfig.cmake
+[0.532s]     gazebo_ros_pkgs-config.cmake
+[0.532s] 
+[0.532s]   Add the installation prefix of "gazebo_ros_pkgs" to CMAKE_PREFIX_PATH or
+[0.532s]   set "gazebo_ros_pkgs_DIR" to a directory containing one of the above files.
+[0.533s]   If "gazebo_ros_pkgs" provides a separate development package or SDK, be
+[0.533s]   sure it has been installed.
+[0.533s] 
+[0.533s] [0m
+[0.533s] -- Configuring incomplete, errors occurred!
+[0.538s] Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_gazebo' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake /home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_gazebo -DCMAKE_INSTALL_PREFIX=/home/mac/dev_ws/omo_robot/install/omo_r1_gazebo

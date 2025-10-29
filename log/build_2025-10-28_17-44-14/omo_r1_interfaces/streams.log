@@ -1,0 +1,24 @@
+[0.068s] Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_interfaces -- -j16 -l16
+[0.179s] [  1%] Built target omo_r1_interfaces__rosidl_generator_type_description
+[0.208s] [  1%] Built target ament_cmake_python_copy_omo_r1_interfaces
+[0.244s] [  2%] Built target omo_r1_interfaces__cpp
+[0.253s] [ 26%] Built target omo_r1_interfaces__rosidl_generator_c
+[0.383s] [ 35%] Built target omo_r1_interfaces__rosidl_typesupport_cpp
+[0.389s] [ 46%] Built target omo_r1_interfaces__rosidl_typesupport_fastrtps_c
+[0.389s] [ 54%] Built target omo_r1_interfaces__rosidl_typesupport_c
+[0.390s] [ 64%] Built target omo_r1_interfaces__rosidl_typesupport_introspection_c
+[0.394s] [ 73%] Built target omo_r1_interfaces__rosidl_typesupport_introspection_cpp
+[0.401s] [ 83%] Built target omo_r1_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.466s] [ 83%] Built target omo_r1_interfaces
+[0.528s] [ 84%] Built target omo_r1_interfaces__py
+[0.602s] [ 92%] Built target omo_r1_interfaces__rosidl_generator_py
+[0.677s] [ 95%] Built target omo_r1_interfaces_s__rosidl_typesupport_introspection_c
+[0.678s] [ 97%] Built target omo_r1_interfaces_s__rosidl_typesupport_c
+[0.684s] [100%] Built target omo_r1_interfaces_s__rosidl_typesupport_fastrtps_c
+[0.743s] running egg_info
+[0.767s] writing omo_r1_interfaces.egg-info/PKG-INFO
+[0.768s] writing dependency_links to omo_r1_interfaces.egg-info/dependency_links.txt
+[0.768s] writing top-level names to omo_r1_interfaces.egg-info/top_level.txt
+[0.834s] reading manifest file 'omo_r1_interfaces.egg-info/SOURCES.txt'
+[0.835s] writing manifest file 'omo_r1_interfaces.egg-info/SOURCES.txt'
+[0.916s] [100%] Built target ament_cmake_python_build_omo_r1_interfaces_egg

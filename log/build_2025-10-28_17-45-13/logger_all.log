@@ -1,0 +1,650 @@
+[0.129s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-skip', 'omo_r1_gazebo']
+[0.130s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=['omo_r1_gazebo'], packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ce7d8490e00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ce7d85e5730>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ce7d85e5730>>, mixin_verb=('build',))
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.184s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mac/dev_ws/omo_robot'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extension 'ignore_ament_install'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extensions ['colcon_pkg']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extension 'colcon_pkg'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extensions ['colcon_meta']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extension 'colcon_meta'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extensions ['ros']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extension 'ros'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extensions ['cmake', 'python']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extension 'cmake'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/YDLidar-SDK) by extension 'python'
+[0.242s] DEBUG:colcon.colcon_core.package_identification:Package 'src/YDLidar-SDK' with type 'cmake' and name 'ydlidar_sdk'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extension 'ignore_ament_install'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extension 'ros'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extensions ['cmake', 'python']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extension 'cmake'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extension 'python'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extensions ['python_setup_py']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2) by extension 'python_setup_py'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1) by extension 'ignore_ament_install'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1) by extension 'ros'
+[0.246s] DEBUG:colcon.colcon_core.package_identification:Package 'src/omo_r1-ros2/omo_r1' with type 'ros.ament_cmake' and name 'omo_r1'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_bringup) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_bringup) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_bringup) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_bringup) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_bringup) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_bringup) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_bringup) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_bringup) by extension 'ros'
+[0.248s] DEBUG:colcon.colcon_core.package_identification:Package 'src/omo_r1-ros2/omo_r1_bringup' with type 'ros.ament_python' and name 'omo_r1_bringup'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_cartographer) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_cartographer) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_cartographer) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_cartographer) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_cartographer) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_cartographer) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_cartographer) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_cartographer) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_cartographer) by extension 'ros'
+[0.249s] DEBUG:colcon.colcon_core.package_identification:Package 'src/omo_r1-ros2/omo_r1_cartographer' with type 'ros.ament_cmake' and name 'omo_r1_cartographer'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_description) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_description) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_description) by extension 'ignore_ament_install'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_description) by extensions ['colcon_pkg']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_description) by extension 'colcon_pkg'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_description) by extensions ['colcon_meta']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_description) by extension 'colcon_meta'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_description) by extensions ['ros']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_description) by extension 'ros'
+[0.250s] DEBUG:colcon.colcon_core.package_identification:Package 'src/omo_r1-ros2/omo_r1_description' with type 'ros.ament_cmake' and name 'omo_r1_description'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_gazebo) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_gazebo) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_gazebo) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_gazebo) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_gazebo) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_gazebo) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_gazebo) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_gazebo) by extension 'ros'
+[0.251s] DEBUG:colcon.colcon_core.package_identification:Package 'src/omo_r1-ros2/omo_r1_gazebo' with type 'ros.ament_cmake' and name 'omo_r1_gazebo'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_interface) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_interface) by extension 'ignore_ament_install'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_interface) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_interface) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_interface) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_interface) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_interface) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_interface) by extension 'ros'
+[0.252s] DEBUG:colcon.colcon_core.package_identification:Package 'src/omo_r1-ros2/omo_r1_interface' with type 'ros.ament_cmake' and name 'omo_r1_interfaces'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_navigation2) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_navigation2) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_navigation2) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_navigation2) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_navigation2) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_navigation2) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_navigation2) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_navigation2) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_navigation2) by extension 'ros'
+[0.253s] DEBUG:colcon.colcon_core.package_identification:Package 'src/omo_r1-ros2/omo_r1_navigation2' with type 'ros.ament_cmake' and name 'omo_r1_navigation2'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_teleop) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_teleop) by extension 'ignore_ament_install'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_teleop) by extensions ['colcon_pkg']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_teleop) by extension 'colcon_pkg'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_teleop) by extensions ['colcon_meta']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_teleop) by extension 'colcon_meta'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_teleop) by extensions ['ros']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/omo_r1-ros2/omo_r1_teleop) by extension 'ros'
+[0.254s] DEBUG:colcon.colcon_core.package_identification:Package 'src/omo_r1-ros2/omo_r1_teleop' with type 'ros.ament_python' and name 'omo_r1_teleop'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ydlidar_ros2_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ydlidar_ros2_driver) by extension 'ignore'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ydlidar_ros2_driver) by extension 'ignore_ament_install'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ydlidar_ros2_driver) by extensions ['colcon_pkg']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ydlidar_ros2_driver) by extension 'colcon_pkg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ydlidar_ros2_driver) by extensions ['colcon_meta']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ydlidar_ros2_driver) by extension 'colcon_meta'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ydlidar_ros2_driver) by extensions ['ros']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ydlidar_ros2_driver) by extension 'ros'
+[0.255s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ydlidar_ros2_driver' with type 'ros.ament_cmake' and name 'ydlidar_ros2_driver'
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.279s] INFO:colcon.colcon_core.package_selection:Skipping package 'omo_r1_gazebo' in 'src/omo_r1-ros2/omo_r1_gazebo'
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.283s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 10 installed packages in /home/mac/dev_ws/omo_robot/install
+[0.286s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 529 installed packages in /opt/ros/jazzy
+[0.288s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_cartographer' build argument 'cmake_args' from command line to 'None'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_cartographer' build argument 'cmake_target' from command line to 'None'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_cartographer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_cartographer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_cartographer' build argument 'cmake_clean_first' from command line to 'False'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_cartographer' build argument 'cmake_force_configure' from command line to 'False'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_cartographer' build argument 'ament_cmake_args' from command line to 'None'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_cartographer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_cartographer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.450s] DEBUG:colcon.colcon_core.verb:Building package 'omo_r1_cartographer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mac/dev_ws/omo_robot/build/omo_r1_cartographer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer', 'merge_install': False, 'path': '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_cartographer', 'symlink_install': False, 'test_result_base': None}
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_description' build argument 'cmake_args' from command line to 'None'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_description' build argument 'cmake_target' from command line to 'None'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.451s] DEBUG:colcon.colcon_core.verb:Building package 'omo_r1_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mac/dev_ws/omo_robot/build/omo_r1_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mac/dev_ws/omo_robot/install/omo_r1_description', 'merge_install': False, 'path': '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_description', 'symlink_install': False, 'test_result_base': None}
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.452s] DEBUG:colcon.colcon_core.verb:Building package 'omo_r1_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces', 'merge_install': False, 'path': '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_interface', 'symlink_install': False, 'test_result_base': None}
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_navigation2' build argument 'cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_navigation2' build argument 'cmake_target' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_navigation2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_navigation2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_navigation2' build argument 'cmake_clean_first' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_navigation2' build argument 'cmake_force_configure' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_navigation2' build argument 'ament_cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_navigation2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_navigation2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.452s] DEBUG:colcon.colcon_core.verb:Building package 'omo_r1_navigation2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mac/dev_ws/omo_robot/build/omo_r1_navigation2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2', 'merge_install': False, 'path': '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_navigation2', 'symlink_install': False, 'test_result_base': None}
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_ros2_driver' build argument 'cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_ros2_driver' build argument 'cmake_target' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_ros2_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_ros2_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_ros2_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_ros2_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_ros2_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_ros2_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_ros2_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.453s] DEBUG:colcon.colcon_core.verb:Building package 'ydlidar_ros2_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver', 'merge_install': False, 'path': '/home/mac/dev_ws/omo_robot/src/ydlidar_ros2_driver', 'symlink_install': False, 'test_result_base': None}
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_sdk' build argument 'cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_sdk' build argument 'cmake_target' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_sdk' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_sdk' build argument 'cmake_clean_cache' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_sdk' build argument 'cmake_clean_first' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_sdk' build argument 'cmake_force_configure' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_sdk' build argument 'ament_cmake_args' from command line to 'None'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_sdk' build argument 'catkin_cmake_args' from command line to 'None'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'ydlidar_sdk' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.454s] DEBUG:colcon.colcon_core.verb:Building package 'ydlidar_sdk' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mac/dev_ws/omo_robot/build/ydlidar_sdk', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk', 'merge_install': False, 'path': '/home/mac/dev_ws/omo_robot/src/YDLidar-SDK', 'symlink_install': False, 'test_result_base': None}
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_bringup' build argument 'cmake_args' from command line to 'None'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_bringup' build argument 'cmake_target' from command line to 'None'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.454s] DEBUG:colcon.colcon_core.verb:Building package 'omo_r1_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mac/dev_ws/omo_robot/build/omo_r1_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup', 'merge_install': False, 'path': '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_teleop' build argument 'cmake_args' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_teleop' build argument 'cmake_target' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_teleop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_teleop' build argument 'cmake_clean_cache' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_teleop' build argument 'cmake_clean_first' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_teleop' build argument 'cmake_force_configure' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_teleop' build argument 'ament_cmake_args' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_teleop' build argument 'catkin_cmake_args' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1_teleop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.455s] DEBUG:colcon.colcon_core.verb:Building package 'omo_r1_teleop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mac/dev_ws/omo_robot/build/omo_r1_teleop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop', 'merge_install': False, 'path': '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_teleop', 'symlink_install': False, 'test_result_base': None}
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1' build argument 'cmake_args' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1' build argument 'cmake_target' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1' build argument 'cmake_clean_cache' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1' build argument 'cmake_clean_first' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1' build argument 'cmake_force_configure' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1' build argument 'ament_cmake_args' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1' build argument 'catkin_cmake_args' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'omo_r1' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.455s] DEBUG:colcon.colcon_core.verb:Building package 'omo_r1' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mac/dev_ws/omo_robot/build/omo_r1', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mac/dev_ws/omo_robot/install/omo_r1', 'merge_install': False, 'path': '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1', 'symlink_install': False, 'test_result_base': None}
+[0.455s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.458s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.458s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_interface' with build type 'ament_cmake'
+[0.458s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_interface'
+[0.462s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.462s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.462s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.472s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_description' with build type 'ament_cmake'
+[0.472s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_description'
+[0.473s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.473s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.481s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_cartographer' with build type 'ament_cmake'
+[0.482s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_cartographer'
+[0.482s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.482s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.491s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_navigation2' with build type 'ament_cmake'
+[0.491s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_navigation2'
+[0.492s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.492s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.500s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mac/dev_ws/omo_robot/src/ydlidar_ros2_driver' with build type 'ament_cmake'
+[0.501s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mac/dev_ws/omo_robot/src/ydlidar_ros2_driver'
+[0.501s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.501s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.510s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mac/dev_ws/omo_robot/src/YDLidar-SDK'
+[0.510s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.510s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.527s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_interfaces -- -j16 -l16
+[0.531s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_description -- -j16 -l16
+[0.535s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_cartographer -- -j16 -l16
+[0.538s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_navigation2 -- -j16 -l16
+[0.541s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver -- -j16 -l16
+[0.551s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/ydlidar_sdk': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/ydlidar_sdk -- -j16 -l16
+[0.623s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_description -- -j16 -l16
+[0.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1_description
+[0.646s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_navigation2 -- -j16 -l16
+[0.647s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1_navigation2
+[0.649s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_cartographer -- -j16 -l16
+[0.651s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1_cartographer
+[0.675s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1_description)
+[0.678s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1_description
+[0.682s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description' for CMake module files
+[0.683s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description' for CMake config files
+[0.684s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_description', 'cmake_prefix_path')
+[0.685s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/hook/cmake_prefix_path.ps1'
+[0.687s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/hook/cmake_prefix_path.dsv'
+[0.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/hook/cmake_prefix_path.sh'
+[0.691s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description/bin'
+[0.691s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description/lib/pkgconfig/omo_r1_description.pc'
+[0.692s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description/lib/python3.12/site-packages'
+[0.692s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description/bin'
+[0.693s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/package.ps1'
+[0.695s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/package.dsv'
+[0.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/package.sh'
+[0.698s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/package.bash'
+[0.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/package.zsh'
+[0.701s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/colcon-core/packages/omo_r1_description)
+[0.705s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1_description)
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description' for CMake module files
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description' for CMake config files
+[0.709s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_description', 'cmake_prefix_path')
+[0.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/hook/cmake_prefix_path.ps1'
+[0.711s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/hook/cmake_prefix_path.dsv'
+[0.711s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/hook/cmake_prefix_path.sh'
+[0.713s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description/bin'
+[0.713s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description/lib/pkgconfig/omo_r1_description.pc'
+[0.713s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description/lib/python3.12/site-packages'
+[0.714s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_description/bin'
+[0.715s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/package.ps1'
+[0.716s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/package.dsv'
+[0.717s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/package.sh'
+[0.718s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/package.bash'
+[0.719s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/omo_r1_description/package.zsh'
+[0.720s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1_description/share/colcon-core/packages/omo_r1_description)
+[0.721s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1_navigation2)
+[0.722s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2' for CMake module files
+[0.724s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2' for CMake config files
+[0.725s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_navigation2', 'cmake_prefix_path')
+[0.726s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/hook/cmake_prefix_path.ps1'
+[0.727s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/hook/cmake_prefix_path.dsv'
+[0.729s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1_navigation2
+[0.729s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/hook/cmake_prefix_path.sh'
+[0.731s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/bin'
+[0.731s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/lib/pkgconfig/omo_r1_navigation2.pc'
+[0.733s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/lib/python3.12/site-packages'
+[0.734s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/bin'
+[0.735s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.ps1'
+[0.736s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.dsv'
+[0.737s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.sh'
+[0.738s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.bash'
+[0.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.zsh'
+[0.740s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/colcon-core/packages/omo_r1_navigation2)
+[0.746s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1_navigation2)
+[0.746s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2' for CMake module files
+[0.748s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2' for CMake config files
+[0.750s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_navigation2', 'cmake_prefix_path')
+[0.750s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/hook/cmake_prefix_path.ps1'
+[0.751s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/hook/cmake_prefix_path.dsv'
+[0.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/hook/cmake_prefix_path.sh'
+[0.753s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/bin'
+[0.753s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/lib/pkgconfig/omo_r1_navigation2.pc'
+[0.754s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/lib/python3.12/site-packages'
+[0.755s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/bin'
+[0.755s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.ps1'
+[0.757s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.dsv'
+[0.758s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.sh'
+[0.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.bash'
+[0.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.zsh'
+[0.762s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/colcon-core/packages/omo_r1_navigation2)
+[0.769s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1_cartographer)
+[0.770s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer' for CMake module files
+[0.779s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1_cartographer
+[0.787s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer' for CMake config files
+[0.788s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_cartographer', 'cmake_prefix_path')
+[0.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/hook/cmake_prefix_path.ps1'
+[0.790s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/hook/cmake_prefix_path.dsv'
+[0.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/hook/cmake_prefix_path.sh'
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/bin'
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/lib/pkgconfig/omo_r1_cartographer.pc'
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/lib/python3.12/site-packages'
+[0.804s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/bin'
+[0.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/package.ps1'
+[0.808s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/package.dsv'
+[0.809s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/package.sh'
+[0.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/package.bash'
+[0.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/package.zsh'
+[0.811s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/colcon-core/packages/omo_r1_cartographer)
+[0.813s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1_cartographer)
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer' for CMake module files
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer' for CMake config files
+[0.815s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_cartographer', 'cmake_prefix_path')
+[0.815s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/hook/cmake_prefix_path.ps1'
+[0.816s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/hook/cmake_prefix_path.dsv'
+[0.816s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/hook/cmake_prefix_path.sh'
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/bin'
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/lib/pkgconfig/omo_r1_cartographer.pc'
+[0.818s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/lib/python3.12/site-packages'
+[0.818s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/bin'
+[0.819s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/package.ps1'
+[0.820s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/package.dsv'
+[0.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/package.sh'
+[0.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/package.bash'
+[0.823s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/omo_r1_cartographer/package.zsh'
+[0.824s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer/share/colcon-core/packages/omo_r1_cartographer)
+[0.828s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver -- -j16 -l16
+[0.830s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver
+[0.852s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ydlidar_ros2_driver)
+[0.853s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver' for CMake module files
+[0.853s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/ydlidar_ros2_driver
+[0.854s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver' for CMake config files
+[0.854s] Level 1:colcon.colcon_core.shell:create_environment_hook('ydlidar_ros2_driver', 'cmake_prefix_path')
+[0.855s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/hook/cmake_prefix_path.ps1'
+[0.855s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/hook/cmake_prefix_path.dsv'
+[0.856s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/hook/cmake_prefix_path.sh'
+[0.857s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/lib'
+[0.857s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/bin'
+[0.857s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/lib/pkgconfig/ydlidar_ros2_driver.pc'
+[0.857s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/lib/python3.12/site-packages'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/bin'
+[0.858s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.ps1'
+[0.859s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.dsv'
+[0.860s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.sh'
+[0.861s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.bash'
+[0.861s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.zsh'
+[0.861s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/colcon-core/packages/ydlidar_ros2_driver)
+[0.862s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ydlidar_ros2_driver)
+[0.862s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver' for CMake module files
+[0.863s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver' for CMake config files
+[0.864s] Level 1:colcon.colcon_core.shell:create_environment_hook('ydlidar_ros2_driver', 'cmake_prefix_path')
+[0.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/hook/cmake_prefix_path.ps1'
+[0.865s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/hook/cmake_prefix_path.dsv'
+[0.865s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/hook/cmake_prefix_path.sh'
+[0.867s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/lib'
+[0.867s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/bin'
+[0.867s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/lib/pkgconfig/ydlidar_ros2_driver.pc'
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/lib/python3.12/site-packages'
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/bin'
+[0.868s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.ps1'
+[0.870s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.dsv'
+[0.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.sh'
+[0.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.bash'
+[0.872s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.zsh'
+[0.872s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver/share/colcon-core/packages/ydlidar_ros2_driver)
+[0.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/ydlidar_sdk' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/ydlidar_sdk -- -j16 -l16
+[0.880s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/ydlidar_sdk': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/ydlidar_sdk
+[0.921s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ydlidar_sdk)
+[0.922s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk' for CMake module files
+[0.923s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/ydlidar_sdk' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/ydlidar_sdk
+[0.923s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk' for CMake config files
+[0.924s] Level 1:colcon.colcon_core.shell:create_environment_hook('ydlidar_sdk', 'cmake_prefix_path')
+[0.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/hook/cmake_prefix_path.ps1'
+[0.925s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/hook/cmake_prefix_path.dsv'
+[0.926s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/hook/cmake_prefix_path.sh'
+[0.927s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/lib'
+[0.927s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/bin'
+[0.927s] Level 1:colcon.colcon_core.shell:create_environment_hook('ydlidar_sdk', 'path')
+[0.927s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/hook/path.ps1'
+[0.928s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/hook/path.dsv'
+[0.928s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/hook/path.sh'
+[0.929s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/lib/pkgconfig/ydlidar_sdk.pc'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/lib/python3.12/site-packages'
+[0.931s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/bin'
+[0.931s] Level 1:colcon.colcon_core.shell:create_environment_hook('ydlidar_sdk', 'pythonscriptspath')
+[0.931s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/hook/pythonscriptspath.ps1'
+[0.932s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/hook/pythonscriptspath.dsv'
+[0.933s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/hook/pythonscriptspath.sh'
+[0.934s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/package.ps1'
+[0.934s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/package.dsv'
+[0.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/package.sh'
+[0.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/package.bash'
+[0.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/ydlidar_sdk/package.zsh'
+[0.937s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/ydlidar_sdk/share/colcon-core/packages/ydlidar_sdk)
+[1.237s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_interfaces -- -j16 -l16
+[1.239s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1_interfaces
+[1.340s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1_interfaces)
+[1.341s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces' for CMake module files
+[1.342s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1_interfaces
+[1.343s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces' for CMake config files
+[1.343s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_interfaces', 'cmake_prefix_path')
+[1.343s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/cmake_prefix_path.ps1'
+[1.344s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/cmake_prefix_path.dsv'
+[1.344s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/cmake_prefix_path.sh'
+[1.345s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib'
+[1.345s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_interfaces', 'ld_library_path_lib')
+[1.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/ld_library_path_lib.ps1'
+[1.346s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/ld_library_path_lib.dsv'
+[1.346s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/ld_library_path_lib.sh'
+[1.347s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/bin'
+[1.347s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/pkgconfig/omo_r1_interfaces.pc'
+[1.347s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages'
+[1.347s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_interfaces', 'pythonpath')
+[1.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/pythonpath.ps1'
+[1.348s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/pythonpath.dsv'
+[1.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/pythonpath.sh'
+[1.349s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/bin'
+[1.349s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.ps1'
+[1.350s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.dsv'
+[1.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.sh'
+[1.351s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.bash'
+[1.351s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.zsh'
+[1.351s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/colcon-core/packages/omo_r1_interfaces)
+[1.352s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1_interfaces)
+[1.352s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces' for CMake module files
+[1.353s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces' for CMake config files
+[1.353s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_interfaces', 'cmake_prefix_path')
+[1.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/cmake_prefix_path.ps1'
+[1.354s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/cmake_prefix_path.dsv'
+[1.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/cmake_prefix_path.sh'
+[1.355s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib'
+[1.355s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_interfaces', 'ld_library_path_lib')
+[1.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/ld_library_path_lib.ps1'
+[1.356s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/ld_library_path_lib.dsv'
+[1.357s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/ld_library_path_lib.sh'
+[1.357s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/bin'
+[1.357s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/pkgconfig/omo_r1_interfaces.pc'
+[1.358s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages'
+[1.358s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_interfaces', 'pythonpath')
+[1.358s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/pythonpath.ps1'
+[1.358s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/pythonpath.dsv'
+[1.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/hook/pythonpath.sh'
+[1.360s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/bin'
+[1.360s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.ps1'
+[1.361s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.dsv'
+[1.361s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.sh'
+[1.363s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.bash'
+[1.364s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.zsh'
+[1.364s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/colcon-core/packages/omo_r1_interfaces)
+[1.365s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_bringup' with build type 'ament_python'
+[1.365s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_bringup', 'ament_prefix_path')
+[1.365s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/hook/ament_prefix_path.ps1'
+[1.366s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/hook/ament_prefix_path.dsv'
+[1.367s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/hook/ament_prefix_path.sh'
+[1.368s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.368s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.375s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_teleop' with build type 'ament_python'
+[1.375s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_teleop', 'ament_prefix_path')
+[1.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/hook/ament_prefix_path.ps1'
+[1.376s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/hook/ament_prefix_path.dsv'
+[1.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/hook/ament_prefix_path.sh'
+[1.377s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.377s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.674s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_bringup'
+[1.675s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.675s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.886s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_teleop'
+[1.886s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.886s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_bringup': CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/ydlidar_sdk:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ PYTHONPATH=/home/mac/dev_ws/omo_robot/build/omo_r1_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/omo_r1_bringup build --build-base /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build install --record /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/install.log --install-scripts $base/lib/omo_r1_bringup --single-version-externally-managed install_data
+[2.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_teleop': CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/ydlidar_sdk:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ PYTHONPATH=/home/mac/dev_ws/omo_robot/build/omo_r1_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/omo_r1_teleop build --build-base /home/mac/dev_ws/omo_robot/build/omo_r1_teleop/build install --record /home/mac/dev_ws/omo_robot/build/omo_r1_teleop/install.log --install-scripts $base/lib/omo_r1_teleop --single-version-externally-managed install_data
+[2.725s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup' for CMake module files
+[2.725s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_bringup' returned '0': CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/ydlidar_sdk:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ PYTHONPATH=/home/mac/dev_ws/omo_robot/build/omo_r1_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/omo_r1_bringup build --build-base /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build install --record /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/install.log --install-scripts $base/lib/omo_r1_bringup --single-version-externally-managed install_data
+[2.726s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup' for CMake config files
+[2.726s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib'
+[2.726s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/bin'
+[2.726s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/pkgconfig/omo_r1_bringup.pc'
+[2.726s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages'
+[2.726s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_bringup', 'pythonpath')
+[2.727s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/hook/pythonpath.ps1'
+[2.727s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/hook/pythonpath.dsv'
+[2.727s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/hook/pythonpath.sh'
+[2.728s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/bin'
+[2.728s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1_bringup)
+[2.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/package.ps1'
+[2.728s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/package.dsv'
+[2.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/package.sh'
+[2.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/package.bash'
+[2.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/package.zsh'
+[2.729s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/colcon-core/packages/omo_r1_bringup)
+[2.730s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop' for CMake module files
+[2.731s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_teleop' returned '0': CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/ydlidar_sdk:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ PYTHONPATH=/home/mac/dev_ws/omo_robot/build/omo_r1_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/omo_r1_teleop build --build-base /home/mac/dev_ws/omo_robot/build/omo_r1_teleop/build install --record /home/mac/dev_ws/omo_robot/build/omo_r1_teleop/install.log --install-scripts $base/lib/omo_r1_teleop --single-version-externally-managed install_data
+[2.732s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop' for CMake config files
+[2.733s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib'
+[2.733s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/bin'
+[2.733s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/pkgconfig/omo_r1_teleop.pc'
+[2.733s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages'
+[2.733s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1_teleop', 'pythonpath')
+[2.733s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/hook/pythonpath.ps1'
+[2.733s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/hook/pythonpath.dsv'
+[2.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/hook/pythonpath.sh'
+[2.734s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/bin'
+[2.734s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1_teleop)
+[2.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/package.ps1'
+[2.735s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/package.dsv'
+[2.735s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/package.sh'
+[2.735s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/package.bash'
+[2.735s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/omo_r1_teleop/package.zsh'
+[2.736s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/share/colcon-core/packages/omo_r1_teleop)
+[2.736s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1' with build type 'ament_cmake'
+[2.736s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1'
+[2.736s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.736s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.754s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1': AMENT_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/home/mac/dev_ws/omo_robot/install/ydlidar_sdk:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1 -- -j16 -l16
+[2.796s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1' returned '0': AMENT_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/home/mac/dev_ws/omo_robot/install/ydlidar_sdk:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1 -- -j16 -l16
+[2.797s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1': AMENT_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/home/mac/dev_ws/omo_robot/install/ydlidar_sdk:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1
+[2.807s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1)
+[2.807s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1' for CMake module files
+[2.808s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1' returned '0': AMENT_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_navigation2:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:/home/mac/dev_ws/omo_robot/install/omo_r1_cartographer:/home/mac/dev_ws/omo_robot/install/ydlidar_sdk:/home/mac/dev_ws/omo_robot/install/ydlidar_ros2_driver:/home/mac/dev_ws/omo_robot/install/omo_r1:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1
+[2.808s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1' for CMake config files
+[2.808s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1', 'cmake_prefix_path')
+[2.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/hook/cmake_prefix_path.ps1'
+[2.809s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/hook/cmake_prefix_path.dsv'
+[2.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/hook/cmake_prefix_path.sh'
+[2.809s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1/bin'
+[2.809s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1/lib/pkgconfig/omo_r1.pc'
+[2.809s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1/lib/python3.12/site-packages'
+[2.810s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1/bin'
+[2.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.ps1'
+[2.810s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.dsv'
+[2.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.sh'
+[2.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.bash'
+[2.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.zsh'
+[2.811s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1/share/colcon-core/packages/omo_r1)
+[2.811s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1)
+[2.811s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1' for CMake module files
+[2.812s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1' for CMake config files
+[2.813s] Level 1:colcon.colcon_core.shell:create_environment_hook('omo_r1', 'cmake_prefix_path')
+[2.813s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/hook/cmake_prefix_path.ps1'
+[2.813s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/hook/cmake_prefix_path.dsv'
+[2.813s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/hook/cmake_prefix_path.sh'
+[2.813s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1/bin'
+[2.813s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1/lib/pkgconfig/omo_r1.pc'
+[2.814s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1/lib/python3.12/site-packages'
+[2.814s] Level 1:colcon.colcon_core.environment:checking '/home/mac/dev_ws/omo_robot/install/omo_r1/bin'
+[2.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.ps1'
+[2.814s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.dsv'
+[2.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.sh'
+[2.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.bash'
+[2.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.zsh'
+[2.815s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mac/dev_ws/omo_robot/install/omo_r1/share/colcon-core/packages/omo_r1)
+[2.815s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.816s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.816s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.816s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.821s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.821s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.821s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.831s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.832s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mac/dev_ws/omo_robot/install/local_setup.ps1'
+[2.833s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mac/dev_ws/omo_robot/install/_local_setup_util_ps1.py'
+[2.834s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mac/dev_ws/omo_robot/install/setup.ps1'
+[2.834s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mac/dev_ws/omo_robot/install/local_setup.sh'
+[2.835s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mac/dev_ws/omo_robot/install/_local_setup_util_sh.py'
+[2.835s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mac/dev_ws/omo_robot/install/setup.sh'
+[2.836s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mac/dev_ws/omo_robot/install/local_setup.bash'
+[2.836s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mac/dev_ws/omo_robot/install/setup.bash'
+[2.837s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mac/dev_ws/omo_robot/install/local_setup.zsh'
+[2.837s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mac/dev_ws/omo_robot/install/setup.zsh'

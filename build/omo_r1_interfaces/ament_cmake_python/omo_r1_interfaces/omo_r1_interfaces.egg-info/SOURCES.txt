@@ -1,0 +1,13 @@
+setup.py
+omo_r1_interfaces/__init__.py
+omo_r1_interfaces.egg-info/PKG-INFO
+omo_r1_interfaces.egg-info/SOURCES.txt
+omo_r1_interfaces.egg-info/dependency_links.txt
+omo_r1_interfaces.egg-info/top_level.txt
+omo_r1_interfaces/srv/__init__.py
+omo_r1_interfaces/srv/_battery.py
+omo_r1_interfaces/srv/_calg.py
+omo_r1_interfaces/srv/_color.py
+omo_r1_interfaces/srv/_onoff.py
+omo_r1_interfaces/srv/_reset_odom.py
+omo_r1_interfaces/srv/_save_color.py

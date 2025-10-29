@@ -1,0 +1,20 @@
+running egg_info
+writing ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/PKG-INFO
+writing dependency_links to ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/dependency_links.txt
+writing entry points to ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/entry_points.txt
+writing requirements to ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/requires.txt
+writing top-level names to ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/top_level.txt
+reading manifest file '../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/SOURCES.txt'
+writing manifest file '../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages/omo_r1_teleop-2.1.2-py3.12.egg-info' (and everything under it)
+Copying ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info to /home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages/omo_r1_teleop-2.1.2-py3.12.egg-info
+running install_scripts
+Installing teleop_joy script to /home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/omo_r1_teleop
+Installing teleop_keyboard script to /home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/omo_r1_teleop
+writing list of installed files to '/home/mac/dev_ws/omo_robot/build/omo_r1_teleop/install.log'

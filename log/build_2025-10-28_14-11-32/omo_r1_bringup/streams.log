@@ -1,0 +1,94 @@
+[0.639s] Invoking command in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_bringup': AMENT_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib:${LD_LIBRARY_PATH} PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ PYTHONPATH=/home/mac/dev_ws/omo_robot/build/omo_r1_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/omo_r1_bringup build --build-base /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build install --record /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/install.log --install-scripts $base/lib/omo_r1_bringup --single-version-externally-managed install_data
+[0.721s] /usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[0.721s] !!
+[0.721s] 
+[0.721s]         ********************************************************************************
+[0.721s]         Usage of dash-separated 'script-dir' will not be supported in future
+[0.721s]         versions. Please use the underscore name 'script_dir' instead.
+[0.721s] 
+[0.721s]         This deprecation is overdue, please update your project and remove deprecated
+[0.721s]         calls to avoid build errors in the future.
+[0.721s] 
+[0.721s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[0.721s]         ********************************************************************************
+[0.721s] 
+[0.721s] !!
+[0.721s]   opt = self.warn_dash_deprecation(opt, section)
+[0.801s] running egg_info
+[0.801s] creating ../../../build/omo_r1_bringup/omo_r1_bringup.egg-info
+[0.812s] writing ../../../build/omo_r1_bringup/omo_r1_bringup.egg-info/PKG-INFO
+[0.812s] writing dependency_links to ../../../build/omo_r1_bringup/omo_r1_bringup.egg-info/dependency_links.txt
+[0.812s] writing entry points to ../../../build/omo_r1_bringup/omo_r1_bringup.egg-info/entry_points.txt
+[0.812s] writing requirements to ../../../build/omo_r1_bringup/omo_r1_bringup.egg-info/requires.txt
+[0.812s] writing top-level names to ../../../build/omo_r1_bringup/omo_r1_bringup.egg-info/top_level.txt
+[0.812s] writing manifest file '../../../build/omo_r1_bringup/omo_r1_bringup.egg-info/SOURCES.txt'
+[0.835s] reading manifest file '../../../build/omo_r1_bringup/omo_r1_bringup.egg-info/SOURCES.txt'
+[0.835s] writing manifest file '../../../build/omo_r1_bringup/omo_r1_bringup.egg-info/SOURCES.txt'
+[0.835s] running build
+[0.835s] running build_py
+[0.835s] creating /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build
+[0.835s] creating /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib
+[0.835s] creating /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup
+[0.835s] copying omo_r1_bringup/__init__.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup
+[0.836s] creating /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts
+[0.836s] copying omo_r1_bringup/scripts/__init__.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts
+[0.836s] copying omo_r1_bringup/scripts/omo_r1_motor_setting_node.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts
+[0.836s] copying omo_r1_bringup/scripts/omo_r1_mcu_node.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts
+[0.836s] copying omo_r1_bringup/scripts/omo_packet_handler.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts
+[0.836s] creating /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/driver
+[0.836s] copying omo_r1_bringup/scripts/driver/__init__.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/driver
+[0.836s] copying omo_r1_bringup/scripts/driver/port.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/driver
+[0.836s] copying omo_r1_bringup/scripts/driver/template.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/driver
+[0.836s] copying omo_r1_bringup/scripts/driver/packet.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/driver
+[0.836s] creating /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/calc
+[0.836s] copying omo_r1_bringup/scripts/calc/__init__.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/calc
+[0.836s] copying omo_r1_bringup/scripts/calc/quaternion_from_euler.py -> /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/calc
+[0.836s] running install
+[0.840s] running install_lib
+[0.852s] creating /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup
+[0.852s] creating /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/__init__.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/omo_r1_motor_setting_node.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/omo_r1_mcu_node.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts
+[0.852s] creating /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/driver
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/driver/__init__.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/driver
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/driver/port.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/driver
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/driver/template.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/driver
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/driver/packet.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/driver
+[0.852s] creating /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/calc
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/calc/__init__.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/calc
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/calc/quaternion_from_euler.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/calc
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/scripts/omo_packet_handler.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts
+[0.852s] copying /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build/lib/omo_r1_bringup/__init__.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup
+[0.852s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/__init__.py to __init__.cpython-312.pyc
+[0.853s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/omo_r1_motor_setting_node.py to omo_r1_motor_setting_node.cpython-312.pyc
+[0.853s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/omo_r1_mcu_node.py to omo_r1_mcu_node.cpython-312.pyc
+[0.855s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/driver/__init__.py to __init__.cpython-312.pyc
+[0.855s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/driver/port.py to port.cpython-312.pyc
+[0.856s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/driver/template.py to template.cpython-312.pyc
+[0.856s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/driver/packet.py to packet.cpython-312.pyc
+[0.857s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/calc/__init__.py to __init__.cpython-312.pyc
+[0.857s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/calc/quaternion_from_euler.py to quaternion_from_euler.cpython-312.pyc
+[0.857s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/scripts/omo_packet_handler.py to omo_packet_handler.cpython-312.pyc
+[0.858s] byte-compiling /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup/__init__.py to __init__.cpython-312.pyc
+[0.858s] running install_data
+[0.858s] creating /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/ament_index
+[0.858s] creating /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/ament_index/resource_index
+[0.858s] creating /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/ament_index/resource_index/packages
+[0.858s] copying resource/omo_r1_bringup -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/ament_index/resource_index/packages
+[0.858s] copying package.xml -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup
+[0.858s] creating /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/launch
+[0.858s] copying launch/omo_r1_motor_setting.launch.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/launch
+[0.858s] copying launch/omo_r1_bringup.launch.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/launch
+[0.858s] copying launch/omo_r1_lidar.launch.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/launch
+[0.858s] copying launch/omo_r1_mcu.launch.py -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/launch
+[0.858s] creating /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/param
+[0.858s] copying param/omo_r1_mcu.yaml -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/param
+[0.858s] copying param/omo_r1_lidar.yaml -> /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/share/omo_r1_bringup/param
+[0.858s] running install_egg_info
+[0.872s] Copying ../../../build/omo_r1_bringup/omo_r1_bringup.egg-info to /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages/omo_r1_bringup-0.0.1-py3.12.egg-info
+[0.873s] running install_scripts
+[0.954s] Installing omo_r1_mcu_node script to /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/omo_r1_bringup
+[0.954s] Installing omo_r1_motor_setting_node script to /home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/omo_r1_bringup
+[0.955s] writing list of installed files to '/home/mac/dev_ws/omo_robot/build/omo_r1_bringup/install.log'
+[0.986s] Invoked command in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_bringup' returned '0': AMENT_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:/home/mac/dev_ws/omo_robot/install/omo_r1_description:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib:${LD_LIBRARY_PATH} PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ PYTHONPATH=/home/mac/dev_ws/omo_robot/build/omo_r1_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mac/dev_ws/omo_robot/install/omo_r1_bringup/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/omo_r1_bringup build --build-base /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/build install --record /home/mac/dev_ws/omo_robot/build/omo_r1_bringup/install.log --install-scripts $base/lib/omo_r1_bringup --single-version-externally-managed install_data

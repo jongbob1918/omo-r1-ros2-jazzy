@@ -1,0 +1,26 @@
+-- Install configuration: ""
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/launch
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/launch/navigation2_rviz.launch.py
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/launch/navigation2.launch.py
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/map
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/map/turtlebot3_world.pgm
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/map/turtlebot3_world.yaml
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/param
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/param/omo_r1mini.yaml
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/rviz
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/rviz/tb3_navigation2.rviz
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/ament_index/resource_index/package_run_dependencies/omo_r1_navigation2
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/ament_index/resource_index/parent_prefix_path/omo_r1_navigation2
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/environment/ament_prefix_path.sh
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/environment/ament_prefix_path.dsv
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/environment/path.sh
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/environment/path.dsv
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/local_setup.bash
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/local_setup.sh
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/local_setup.zsh
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/local_setup.dsv
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.dsv
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/ament_index/resource_index/packages/omo_r1_navigation2
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/cmake/omo_r1_navigation2Config.cmake
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/cmake/omo_r1_navigation2Config-version.cmake
+-- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_navigation2/share/omo_r1_navigation2/package.xml

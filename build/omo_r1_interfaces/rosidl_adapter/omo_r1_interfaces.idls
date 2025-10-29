@@ -1,0 +1,6 @@
+/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces/rosidl_adapter/omo_r1_interfaces:srv/Battery.idl
+/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces/rosidl_adapter/omo_r1_interfaces:srv/Calg.idl
+/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces/rosidl_adapter/omo_r1_interfaces:srv/Color.idl
+/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces/rosidl_adapter/omo_r1_interfaces:srv/Onoff.idl
+/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces/rosidl_adapter/omo_r1_interfaces:srv/ResetOdom.idl
+/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces/rosidl_adapter/omo_r1_interfaces:srv/SaveColor.idl

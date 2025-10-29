@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "omo_r1_interfaces/srv/SaveColor_Response",
+      "fields": [
+        {
+          "name": "structure_needs_at_least_one_member",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "omo_r1_interfaces/srv/SaveColor_Response",
+      "hash_string": "RIHS01_670d6bb9d03d4fb1fb2bc7b23a02ac5da9aac005c7a26dc858b9fa51ee1942b7"
+    }
+  ]
+}

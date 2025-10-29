@@ -1,0 +1,15 @@
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/ament_index/resource_index/package_run_dependencies/omo_r1
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/ament_index/resource_index/parent_prefix_path/omo_r1
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/environment/ament_prefix_path.sh
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/environment/ament_prefix_path.dsv
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/environment/path.sh
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/environment/path.dsv
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/local_setup.bash
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/local_setup.sh
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/local_setup.zsh
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/local_setup.dsv
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.dsv
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/ament_index/resource_index/packages/omo_r1
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/cmake/omo_r1Config.cmake
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/cmake/omo_r1Config-version.cmake
+/home/mac/dev_ws/omo_robot/install/omo_r1/share/omo_r1/package.xml

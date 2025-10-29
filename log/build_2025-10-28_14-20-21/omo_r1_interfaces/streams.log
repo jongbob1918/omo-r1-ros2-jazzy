@@ -1,0 +1,267 @@
+[0.050s] Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_interfaces -- -j16 -l16
+[0.146s] [  1%] Built target omo_r1_interfaces__rosidl_generator_type_description
+[0.170s] [  1%] Built target ament_cmake_python_copy_omo_r1_interfaces
+[0.193s] [  2%] Built target omo_r1_interfaces__cpp
+[0.206s] [ 26%] Built target omo_r1_interfaces__rosidl_generator_c
+[0.282s] [ 40%] Built target omo_r1_interfaces__rosidl_typesupport_cpp
+[0.283s] [ 45%] Built target omo_r1_interfaces__rosidl_typesupport_fastrtps_c
+[0.306s] [ 61%] Built target omo_r1_interfaces__rosidl_typesupport_c
+[0.306s] [ 64%] Built target omo_r1_interfaces__rosidl_typesupport_introspection_c
+[0.307s] [ 73%] Built target omo_r1_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.317s] [ 83%] Built target omo_r1_interfaces__rosidl_typesupport_introspection_cpp
+[0.363s] [ 83%] Built target omo_r1_interfaces
+[0.419s] [ 84%] Built target omo_r1_interfaces__py
+[0.482s] [ 92%] Built target omo_r1_interfaces__rosidl_generator_py
+[0.533s] [100%] Built target omo_r1_interfaces_s__rosidl_typesupport_introspection_c
+[0.533s] [100%] Built target omo_r1_interfaces_s__rosidl_typesupport_c
+[0.533s] [100%] Built target omo_r1_interfaces_s__rosidl_typesupport_fastrtps_c
+[0.571s] running egg_info
+[0.592s] writing omo_r1_interfaces.egg-info/PKG-INFO
+[0.592s] writing dependency_links to omo_r1_interfaces.egg-info/dependency_links.txt
+[0.592s] writing top-level names to omo_r1_interfaces.egg-info/top_level.txt
+[0.650s] reading manifest file 'omo_r1_interfaces.egg-info/SOURCES.txt'
+[0.651s] writing manifest file 'omo_r1_interfaces.egg-info/SOURCES.txt'
+[0.714s] [100%] Built target ament_cmake_python_build_omo_r1_interfaces_egg
+[0.741s] Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/mac/dev_ws/omo_robot/build/omo_r1_interfaces -- -j16 -l16
+[0.743s] Invoking command in '/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1_interfaces
+[0.761s] -- Install configuration: ""
+[0.762s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/ament_index/resource_index/rosidl_interfaces/omo_r1_interfaces
+[0.762s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Battery.json
+[0.762s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Calg.json
+[0.762s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Color.json
+[0.762s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Onoff.json
+[0.762s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/ResetOdom.json
+[0.763s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/SaveColor.json
+[0.763s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces
+[0.763s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/msg
+[0.763s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/msg/rosidl_generator_c__visibility_control.h
+[0.763s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv
+[0.763s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/color.h
+[0.763s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail
+[0.763s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__type_support.h
+[0.763s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__type_support.h
+[0.763s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__struct.h
+[0.764s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__struct.h
+[0.764s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__description.c
+[0.764s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__functions.h
+[0.764s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__struct.h
+[0.764s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__description.c
+[0.764s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__functions.h
+[0.764s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__type_support.h
+[0.764s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__functions.c
+[0.764s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__description.c
+[0.765s] -- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__type_support.c
+[0.765s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__struct.h
+[0.765s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__functions.h
+[0.765s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__struct.h
+[0.765s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__description.c
+[0.765s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__functions.h
+[0.765s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__type_support.h
+[0.765s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__functions.c
+[0.765s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__description.c
+[0.766s] -- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__type_support.c
+[0.766s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__type_support.c
+[0.766s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__functions.c
+[0.766s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__type_support.c
+[0.766s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__functions.c
+[0.767s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__type_support.c
+[0.767s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__functions.c
+[0.767s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__functions.c
+[0.767s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__description.c
+[0.767s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__functions.h
+[0.767s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__functions.h
+[0.767s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__type_support.h
+[0.767s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__type_support.h
+[0.767s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__struct.h
+[0.767s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__type_support.c
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/onoff.h
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/save_color.h
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/reset_odom.h
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/battery.h
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/calg.h
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/environment/library_path.sh
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/environment/library_path.dsv
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/libomo_r1_interfaces__rosidl_generator_c.so
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/msg
+[0.768s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__rosidl_typesupport_fastrtps_c.h
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__rosidl_typesupport_fastrtps_c.h
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__rosidl_typesupport_fastrtps_c.h
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__rosidl_typesupport_fastrtps_c.h
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__rosidl_typesupport_fastrtps_c.h
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__rosidl_typesupport_fastrtps_c.h
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/libomo_r1_interfaces__rosidl_typesupport_fastrtps_c.so
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces
+[0.769s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/msg
+[0.770s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.770s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv
+[0.770s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail
+[0.770s] -- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__type_support.c
+[0.770s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__rosidl_typesupport_introspection_c.h
+[0.770s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__rosidl_typesupport_introspection_c.h
+[0.770s] -- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__type_support.c
+[0.770s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__type_support.c
+[0.770s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__type_support.c
+[0.770s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__type_support.c
+[0.770s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__rosidl_typesupport_introspection_c.h
+[0.770s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__rosidl_typesupport_introspection_c.h
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__rosidl_typesupport_introspection_c.h
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__type_support.c
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__rosidl_typesupport_introspection_c.h
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/libomo_r1_interfaces__rosidl_typesupport_introspection_c.so
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/libomo_r1_interfaces__rosidl_typesupport_c.so
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/msg
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail
+[0.771s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__type_support.hpp
+[0.772s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__builder.hpp
+[0.772s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__builder.hpp
+[0.772s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__type_support.hpp
+[0.772s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__type_support.hpp
+[0.772s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__struct.hpp
+[0.772s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__traits.hpp
+[0.772s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__type_support.hpp
+[0.772s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__builder.hpp
+[0.772s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__traits.hpp
+[0.772s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__struct.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__struct.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__struct.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__struct.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__type_support.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__builder.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__type_support.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__builder.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__struct.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__traits.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__traits.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__traits.hpp
+[0.773s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__builder.hpp
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__traits.hpp
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/color.hpp
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/onoff.hpp
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/battery.hpp
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/calg.hpp
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/save_color.hpp
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/reset_odom.hpp
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/msg
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.774s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__rosidl_typesupport_fastrtps_cpp.hpp
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__rosidl_typesupport_fastrtps_cpp.hpp
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/dds_fastrtps
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__rosidl_typesupport_fastrtps_cpp.hpp
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__rosidl_typesupport_fastrtps_cpp.hpp
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__rosidl_typesupport_fastrtps_cpp.hpp
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__rosidl_typesupport_fastrtps_cpp.hpp
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/libomo_r1_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail
+[0.775s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__type_support.cpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__type_support.cpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__type_support.cpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__rosidl_typesupport_introspection_cpp.hpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__rosidl_typesupport_introspection_cpp.hpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/save_color__type_support.cpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/onoff__rosidl_typesupport_introspection_cpp.hpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__type_support.cpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/calg__rosidl_typesupport_introspection_cpp.hpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/reset_odom__type_support.cpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/battery__rosidl_typesupport_introspection_cpp.hpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/include/omo_r1_interfaces/omo_r1_interfaces/srv/detail/color__rosidl_typesupport_introspection_cpp.hpp
+[0.776s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/libomo_r1_interfaces__rosidl_typesupport_introspection_cpp.so
+[0.777s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/libomo_r1_interfaces__rosidl_typesupport_cpp.so
+[0.777s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/environment/pythonpath.sh
+[0.777s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/environment/pythonpath.dsv
+[0.777s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces-0.0.0-py3.12.egg-info
+[0.777s] -- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[0.777s] -- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[0.777s] -- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[0.777s] -- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[0.777s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces
+[0.777s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/__init__.py
+[0.777s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/_omo_r1_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/omo_r1_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/omo_r1_interfaces_s__rosidl_typesupport_c.so
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/_omo_r1_interfaces_s.ep.rosidl_typesupport_c.c
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/_omo_r1_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/omo_r1_interfaces_s__rosidl_typesupport_introspection_c.so
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_onoff.py
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/__init__.py
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_battery.py
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_save_color.py
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_calg_s.c
+[0.778s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_reset_odom.py
+[0.779s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_battery_s.c
+[0.779s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_color_s.c
+[0.779s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_onoff_s.c
+[0.779s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_calg.py
+[0.779s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_color.py
+[0.779s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_reset_odom_s.c
+[0.779s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv/_save_color_s.c
+[0.835s] Listing '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces'...
+[0.835s] Listing '/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/srv'...
+[0.843s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/omo_r1_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[0.843s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/omo_r1_interfaces_s__rosidl_typesupport_introspection_c.so
+[0.844s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages/omo_r1_interfaces/omo_r1_interfaces_s__rosidl_typesupport_c.so
+[0.844s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/libomo_r1_interfaces__rosidl_generator_py.so
+[0.844s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Battery.idl
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Calg.idl
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Color.idl
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Onoff.idl
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/ResetOdom.idl
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/SaveColor.idl
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Battery.srv
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Calg.srv
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Color.srv
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/Onoff.srv
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/ResetOdom.srv
+[0.845s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/srv/SaveColor.srv
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/ament_index/resource_index/package_run_dependencies/omo_r1_interfaces
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/ament_index/resource_index/parent_prefix_path/omo_r1_interfaces
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/environment/ament_prefix_path.sh
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/environment/ament_prefix_path.dsv
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/environment/path.sh
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/environment/path.dsv
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/local_setup.bash
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/local_setup.sh
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/local_setup.zsh
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/local_setup.dsv
+[0.846s] -- Installing: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.dsv
+[0.846s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/ament_index/resource_index/packages/omo_r1_interfaces
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/export_omo_r1_interfaces__rosidl_generator_cExport.cmake
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/export_omo_r1_interfaces__rosidl_generator_cExport-noconfig.cmake
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/export_omo_r1_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/export_omo_r1_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/omo_r1_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/omo_r1_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/omo_r1_interfaces__rosidl_typesupport_cExport.cmake
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/omo_r1_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/export_omo_r1_interfaces__rosidl_generator_cppExport.cmake
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/export_omo_r1_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.847s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/export_omo_r1_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.848s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/omo_r1_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[0.848s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/omo_r1_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.848s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/omo_r1_interfaces__rosidl_typesupport_cppExport.cmake
+[0.848s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/omo_r1_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[0.848s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/export_omo_r1_interfaces__rosidl_generator_pyExport.cmake
+[0.848s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/export_omo_r1_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[0.848s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/rosidl_cmake-extras.cmake
+[0.848s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.848s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.849s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[0.849s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[0.849s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.849s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.849s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/omo_r1_interfacesConfig.cmake
+[0.849s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/cmake/omo_r1_interfacesConfig-version.cmake
+[0.849s] -- Up-to-date: /home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/share/omo_r1_interfaces/package.xml
+[0.855s] Invoked command in '/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/mac/dev_ws/omo_robot/build/omo_r1_interfaces

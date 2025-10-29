@@ -1,0 +1,3 @@
+[console_scripts]
+omo_r1_mcu_node = omo_r1_bringup.scripts.omo_r1_mcu_node:main
+omo_r1_motor_setting_node = omo_r1_bringup.scripts.omo_r1_motor_setting_node:main

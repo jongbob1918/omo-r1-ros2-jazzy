@@ -1,0 +1,37 @@
+[0.900s] Invoking command in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_teleop': AMENT_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib:${LD_LIBRARY_PATH} PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ PYTHONPATH=/home/mac/dev_ws/omo_robot/build/omo_r1_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/omo_r1_teleop build --build-base /home/mac/dev_ws/omo_robot/build/omo_r1_teleop/build install --record /home/mac/dev_ws/omo_robot/build/omo_r1_teleop/install.log --install-scripts $base/lib/omo_r1_teleop --single-version-externally-managed install_data
+[0.988s] /usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[0.988s] !!
+[0.988s] 
+[0.988s]         ********************************************************************************
+[0.988s]         Usage of dash-separated 'script-dir' will not be supported in future
+[0.988s]         versions. Please use the underscore name 'script_dir' instead.
+[0.988s] 
+[0.988s]         This deprecation is overdue, please update your project and remove deprecated
+[0.988s]         calls to avoid build errors in the future.
+[0.988s] 
+[0.988s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[0.988s]         ********************************************************************************
+[0.988s] 
+[0.988s] !!
+[0.988s]   opt = self.warn_dash_deprecation(opt, section)
+[1.074s] running egg_info
+[1.085s] writing ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/PKG-INFO
+[1.085s] writing dependency_links to ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/dependency_links.txt
+[1.086s] writing entry points to ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/entry_points.txt
+[1.086s] writing requirements to ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/requires.txt
+[1.086s] writing top-level names to ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/top_level.txt
+[1.109s] reading manifest file '../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/SOURCES.txt'
+[1.109s] writing manifest file '../../../build/omo_r1_teleop/omo_r1_teleop.egg-info/SOURCES.txt'
+[1.110s] running build
+[1.110s] running build_py
+[1.110s] running install
+[1.114s] running install_lib
+[1.126s] running install_data
+[1.126s] running install_egg_info
+[1.141s] removing '/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages/omo_r1_teleop-2.1.2-py3.12.egg-info' (and everything under it)
+[1.142s] Copying ../../../build/omo_r1_teleop/omo_r1_teleop.egg-info to /home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages/omo_r1_teleop-2.1.2-py3.12.egg-info
+[1.142s] running install_scripts
+[1.240s] Installing teleop_joy script to /home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/omo_r1_teleop
+[1.240s] Installing teleop_keyboard script to /home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/omo_r1_teleop
+[1.240s] writing list of installed files to '/home/mac/dev_ws/omo_robot/build/omo_r1_teleop/install.log'
+[1.285s] Invoked command in '/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_teleop' returned '0': AMENT_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib:${LD_LIBRARY_PATH} PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ PYTHONPATH=/home/mac/dev_ws/omo_robot/build/omo_r1_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mac/dev_ws/omo_robot/install/omo_r1_teleop/lib/python3.12/site-packages:/home/mac/dev_ws/omo_robot/install/omo_r1_interfaces/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/omo_r1_teleop build --build-base /home/mac/dev_ws/omo_robot/build/omo_r1_teleop/build install --record /home/mac/dev_ws/omo_robot/build/omo_r1_teleop/install.log --install-scripts $base/lib/omo_r1_teleop --single-version-externally-managed install_data

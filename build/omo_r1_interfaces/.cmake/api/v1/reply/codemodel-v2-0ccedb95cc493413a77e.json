@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-a159c117a27ae5ca4463.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "omo_r1_interfaces__py",
+					"jsonFile" : "directory-omo_r1_interfaces__py-d3217e410482ccf3d9af.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces/omo_r1_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "omo_r1_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_omo_r1_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_omo_r1_interfaces_egg-8006ddc477536be58aa8.json",
+					"name" : "ament_cmake_python_build_omo_r1_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_omo_r1_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_omo_r1_interfaces-82d5c8362b2f6fd61e28.json",
+					"name" : "ament_cmake_python_copy_omo_r1_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces-17fb8f32bfb2dde24017.json",
+					"name" : "omo_r1_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces__cpp-71bed1561d7b5691107b.json",
+					"name" : "omo_r1_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "omo_r1_interfaces__py::@4896addf21e37687fe6f",
+					"jsonFile" : "target-omo_r1_interfaces__py-ee2a2eb2ca4bd707a4f4.json",
+					"name" : "omo_r1_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces__rosidl_generator_c-b7dd07c2b63916cf1d1d.json",
+					"name" : "omo_r1_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces__rosidl_generator_py-5b663dd1eb2a3f9bf101.json",
+					"name" : "omo_r1_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces__rosidl_generator_type_description-ade91371e015df53b16c.json",
+					"name" : "omo_r1_interfaces__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces__rosidl_typesupport_c-30cc9db4528905e892bc.json",
+					"name" : "omo_r1_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces__rosidl_typesupport_cpp-e8f76dc024059d8a7d88.json",
+					"name" : "omo_r1_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces__rosidl_typesupport_fastrtps_c-93fdab711c28e427d383.json",
+					"name" : "omo_r1_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces__rosidl_typesupport_fastrtps_cpp-4d802a425732960a5c2c.json",
+					"name" : "omo_r1_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces__rosidl_typesupport_introspection_c-604776c43fb6492f4b14.json",
+					"name" : "omo_r1_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces__rosidl_typesupport_introspection_cpp-195cbe3d9bc3b621459f.json",
+					"name" : "omo_r1_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces_s__rosidl_typesupport_c-d4f4787075b7bc61c4cc.json",
+					"name" : "omo_r1_interfaces_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces_s__rosidl_typesupport_fastrtps_c-6a6f592f72e4a3d19883.json",
+					"name" : "omo_r1_interfaces_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces_s__rosidl_typesupport_introspection_c-d6e450d4aa352be0a6d8.json",
+					"name" : "omo_r1_interfaces_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omo_r1_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omo_r1_interfaces_uninstall-c6e0ae5d7a6ad8a28dc0.json",
+					"name" : "omo_r1_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-1028aa37a4fd3c5ec255.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mac/dev_ws/omo_robot/build/omo_r1_interfaces",
+		"source" : "/home/mac/dev_ws/omo_robot/src/omo_r1-ros2/omo_r1_interface"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

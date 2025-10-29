@@ -1,0 +1,12 @@
+srv/Battery.idl
+srv/Battery.srv
+srv/Calg.idl
+srv/Calg.srv
+srv/Color.idl
+srv/Color.srv
+srv/Onoff.idl
+srv/Onoff.srv
+srv/ResetOdom.idl
+srv/ResetOdom.srv
+srv/SaveColor.idl
+srv/SaveColor.srv
