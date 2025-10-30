@@ -17,7 +17,7 @@ from tf2_ros import TransformBroadcaster
 from omo_r1_interfaces.srv import Battery, Calg, Color, Onoff, ResetOdom
 
 from .calc.quaternion_from_euler import quaternion_from_euler
-from .omo_packet_handler import PacketHandler
+from .omo_packet_handler_origin import PacketHandler
 
 
 DEFAULT_PARAMETERS = [
@@ -113,13 +113,11 @@ class OMOR1MiniNode(Node):
 
         self.distance_per_pulse = 2 * math.pi * self.wheel_radius / self.enc_pulse / self.gear_ratio
         self._logger.info(
-            'Loaded parameters: gear_ratio=%.3f, wheel_separation=%.3f, wheel_radius=%.3f, '
-            'enc_pulse=%.1f, distance_per_pulse=%.6f',
-            self.gear_ratio,
-            self.wheel_separation,
-            self.wheel_radius,
-            self.enc_pulse,
-            self.distance_per_pulse,
+            f'Loaded parameters: gear_ratio={self.gear_ratio:.3f}, '
+            f'wheel_separation={self.wheel_separation:.3f}, '
+            f'wheel_radius={self.wheel_radius:.3f}, '
+            f'enc_pulse={self.enc_pulse:.1f}, '
+            f'distance_per_pulse={self.distance_per_pulse:.6f}'
         )
 
         self.ph = PacketHandler(port_name, port_baudrate)
@@ -187,12 +185,12 @@ class OMOR1MiniNode(Node):
             self.calc_yaw.wheel_ang += orient_vel * dt
             self.odom_pose.theta = self.calc_yaw.calc_filter(vel_z * math.pi / 180.0, dt)
             self._logger.debug(
-                'omo_r1 state : whl pos %.2f, %.2f, gyro : %.2f, whl odom : %.2f, robot theta : %.2f',
-                odo_l,
-                odo_r,
-                vel_z,
-                self.calc_yaw.wheel_ang * 180 / math.pi,
-                self.odom_pose.theta * 180 / math.pi,
+                (
+                    f'omo_r1 state : whl pos {odo_l:.2f}, {odo_r:.2f}, '
+                    f'gyro : {vel_z:.2f}, '
+                    f'whl odom : {self.calc_yaw.wheel_ang * 180 / math.pi:.2f}, '
+                    f'robot theta : {self.odom_pose.theta * 180 / math.pi:.2f}'
+                )
             )
         else:
             self.odom_pose.theta += orient_vel * dt
@@ -202,14 +200,10 @@ class OMOR1MiniNode(Node):
         self.odom_pose.x += d_x * dt
         self.odom_pose.y += d_y * dt
         self._logger.debug(
-            'ODO L:%.2f, R:%.2f, V:%.2f, W=%.2f --> X:%.2f, Y:%.2f, Theta:%.2f',
-            odo_l,
-            odo_r,
-            trans_vel,
-            orient_vel,
-            self.odom_pose.x,
-            self.odom_pose.y,
-            self.odom_pose.theta,
+            (
+                f'ODO L:{odo_l:.2f}, R:{odo_r:.2f}, V:{trans_vel:.2f}, W={orient_vel:.2f} -> '
+                f'X:{self.odom_pose.x:.2f}, Y:{self.odom_pose.y:.2f}, Theta:{self.odom_pose.theta:.2f}'
+            )
         )
         q = quaternion_from_euler(0, 0, self.odom_pose.theta)
 
@@ -304,15 +298,12 @@ class OMOR1MiniNode(Node):
         self.d_setHDLT['switch'] = int(request.set)
         command = "$cHDLT," + onoff
         self.ph.write_port(command)
-        self._logger.info('SERVICE: Headlight: %s', onoff)
+        self._logger.info(f'SERVICE: Headlight: {onoff}')
         return response
 
     def cbSrv_setColor(self, request, response):
         self._logger.info(
-            "SERVICE: SET COLOR: R(%s)G(%s)B(%s)",
-            request.red,
-            request.green,
-            request.blue,
+            f"SERVICE: SET COLOR: R({request.red})G({request.green})B({request.blue})"
         )
         return response
 
@@ -321,10 +312,7 @@ class OMOR1MiniNode(Node):
         bat_status = self.ph.robot_state['BAT']
         if len(bat_status) == 3:
             self._logger.info(
-                "SERVICE: Battery V:%s, SOC: %s, Current %s",
-                bat_status[0],
-                bat_status[1],
-                bat_status[2],
+                f"SERVICE: Battery V:{bat_status[0]}, SOC: {bat_status[1]}, Current {bat_status[2]}"
             )
             response.volt = bat_status[0] * 0.1
             response.soc = bat_status[1]
@@ -335,13 +323,15 @@ class OMOR1MiniNode(Node):
         self.odom_pose.x = request.x
         self.odom_pose.y = request.y
         self.odom_pose.theta = request.theta
-        self._logger.info("SERVICE: RESET ODOM X:%s, Y:%s, Theta:%s", request.x, request.y, request.theta)
+        self._logger.info(
+            f"SERVICE: RESET ODOM X:{request.x}, Y:{request.y}, Theta:{request.theta}"
+        )
         return response
 
     def cbSrv_setBuzzer(self, request, response):
         onoff = '1' if request.set else '0'
         command = "$sBUZEN," + onoff
-        self._logger.info("SERVICE: SET BUZZER : %s", onoff)
+        self._logger.info(f"SERVICE: SET BUZZER : {onoff}")
         self.ph.write_port(command)
         return Onoff.Response()
 
@@ -357,6 +347,8 @@ def main(args=None) -> None:
     node = OMOR1MiniNode()
     try:
         rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info('Shutting down omo_r1_mcu_node (Ctrl-C)')
     finally:
         node.ph.close_port()
         node.destroy_node()

@@ -1,9 +1,11 @@
 /**:
   ros__parameters:
+    diagnostic_updater:
+      hardware_id: 'none'
     filter1:
       name: base_polygon_filter
       type: laser_filters/LaserScanPolygonFilter
       params:
         polygon_frame: base_link
-        polygon: '[[0.28, -0.22], [0.28, 0.22], [-0.36, 0.22], [-0.36, -0.22]]'
+        polygon: '[[0.1, -0.3], [0.1, 0.3], [-0.5, 0.3], [-0.5, -0.3]]'
         invert: false
