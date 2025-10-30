@@ -9,3 +9,9 @@
         polygon_frame: base_link
         polygon: '[[0.1, -0.3], [0.1, 0.3], [-0.5, 0.3], [-0.5, -0.3]]'
         invert: false
+    qos_overrides:
+      /scan:
+        subscription:
+          reliability: best_effort
+          history: keep_last
+          depth: 10
