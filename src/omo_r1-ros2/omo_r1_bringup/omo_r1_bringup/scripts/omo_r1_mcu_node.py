@@ -5,7 +5,7 @@
 from dataclasses import dataclass, field
 import math
 from time import sleep
-from typing import Any, List
+from typing import Any, List, Optional
 
 import rclpy
 from geometry_msgs.msg import Pose, TransformStamped, Twist
@@ -17,7 +17,7 @@ from tf2_ros import TransformBroadcaster
 from omo_r1_interfaces.srv import Battery, Calg, Color, Onoff, ResetOdom
 
 from .calc.quaternion_from_euler import quaternion_from_euler
-from .omo_packet_handler_origin import PacketHandler
+from .omo_packet_handler import PacketHandler
 
 
 DEFAULT_PARAMETERS = [
@@ -120,7 +120,7 @@ class OMOR1MiniNode(Node):
             f'distance_per_pulse={self.distance_per_pulse:.6f}'
         )
 
-        self.ph = PacketHandler(port_name, port_baudrate)
+        self.ph = PacketHandler(port_name, port_baudrate, self._logger)
         self.calc_yaw = ComplementaryFilter(self._logger)
 
         self.ph.robot_state = {
@@ -162,6 +162,10 @@ class OMOR1MiniNode(Node):
         self.ph.set_periodic_info(50)
 
         self.timerProc = self.create_timer(0.01, self.update_robot)
+        self._prev_odo_l: Optional[float] = None
+        self._prev_odo_r: Optional[float] = None
+        self._prev_update_time: Optional[rclpy.time.Time] = None
+        self._odo_diff_threshold_mm = 10.0  # Ignore tiny odometry jitter (noise guard)
 
     def _declare_default_parameters(self) -> None:
         for param_name, default_value in DEFAULT_PARAMETERS:
@@ -174,12 +178,13 @@ class OMOR1MiniNode(Node):
     def update_odometry(self, odo_l, odo_r, trans_vel, orient_vel, vel_z):
         odo_l /= 1000.0
         odo_r /= 1000.0
-        trans_vel /= 1000.0
-        orient_vel /= 1000.0
 
         self.odom_pose.timestamp = self.get_clock().now()
         dt = (self.odom_pose.timestamp - self.odom_pose.pre_timestamp).nanoseconds * 1e-9
         self.odom_pose.pre_timestamp = self.odom_pose.timestamp
+
+        trans_vel /= 1000.0
+        orient_vel /= 1000.0
 
         if self.use_gyro:
             self.calc_yaw.wheel_ang += orient_vel * dt
@@ -280,6 +285,42 @@ class OMOR1MiniNode(Node):
         roll_imu = self.ph._imu[0]
         pitch_imu = self.ph._imu[1]
         yaw_imu = self.ph._imu[2]
+
+        now = self.get_clock().now()
+        dt = None
+        if self._prev_update_time is not None:
+            dt = (now - self._prev_update_time).nanoseconds * 1e-9
+        self._prev_update_time = now
+
+        if self._prev_odo_l is None or self._prev_odo_r is None:
+            self._prev_odo_l = odo_l
+            self._prev_odo_r = odo_r
+        elif dt and dt > 0.0:
+            odo_l_diff = odo_l - self._prev_odo_l
+            odo_r_diff = odo_r - self._prev_odo_r
+            movement_detected = (
+                abs(odo_l_diff) >= self._odo_diff_threshold_mm
+                or abs(odo_r_diff) >= self._odo_diff_threshold_mm
+            )
+            if abs(trans_vel) < 1e-3 and movement_detected:
+                # Reconstruct linear velocity (mm/s) from wheel odometry when VW data is missing.
+                lin_mm_per_s = (odo_l_diff + odo_r_diff) / (2.0 * dt)
+                trans_vel = lin_mm_per_s
+            if abs(orient_vel) < 1e-3 and movement_detected:
+                # Likewise recover angular velocity (converted to mrad/s) from left/right differences.
+                ang_rad_per_s = (
+                    (odo_r_diff - odo_l_diff) / (self.wheel_separation * 1000.0)
+                ) / dt
+                orient_vel = ang_rad_per_s * 1000.0
+            if not movement_detected:
+                trans_vel = 0.0
+                orient_vel = 0.0
+            self._prev_odo_l = odo_l
+            self._prev_odo_r = odo_r
+        else:
+            self._prev_odo_l = odo_l
+            self._prev_odo_r = odo_r
+        self.ph._vel = [trans_vel, orient_vel]
 
         self.update_odometry(odo_l, odo_r, trans_vel, orient_vel, vel_z)
         self.updateJointStates(odo_l, odo_r, trans_vel, orient_vel)

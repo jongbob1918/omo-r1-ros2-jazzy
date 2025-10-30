@@ -14,9 +14,12 @@ logger = logging.getLogger(__name__)
 class PacketHandler:
     """Thin wrapper around the YDLIDAR serial protocol."""
 
-    def __init__(self, port_name: str, baud_rate: int) -> None:
+    def __init__(self, port_name: str, baud_rate: int, node_logger=None) -> None:
         self.port_name = port_name
         self.baud_rate = baud_rate
+        self._logger = node_logger if node_logger is not None else logger
+        if node_logger is None:
+            logging.basicConfig(level=logging.INFO)
         self._ser = serial.Serial(self.port_name, self.baud_rate)
         self._ser.flushInput()
         self._ser.reset_input_buffer()
@@ -49,7 +52,7 @@ class PacketHandler:
         return b''
 
     def close_port(self) -> None:
-        logger.info("Port close")
+        self._logger.info("Port close")
         self._ser.close()
 
     def read_packet(self) -> None:
@@ -61,6 +64,7 @@ class PacketHandler:
         if not whole_packet:
             return
 
+        self._logger.debug(f"Packet received: {whole_packet}")
         packet = whole_packet.split(',')
         try:
             header_tokens = packet[0].split('#', 1)
@@ -82,7 +86,7 @@ class PacketHandler:
             elif header.startswith('POSE'):
                 self._imu = [float(packet[1]), float(packet[2]), float(packet[3])]
         except (IndexError, ValueError) as exc:
-            logger.debug("Failed to parse packet '%s': %s", whole_packet, exc)
+            self._logger.debug(f"Failed to parse packet '{whole_packet}': {exc}")
 
     def update_battery_state(self) -> None:
         self.write_port("$qBAT")

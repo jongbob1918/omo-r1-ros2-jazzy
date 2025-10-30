@@ -37,5 +37,6 @@ def generate_launch_description():
       emulate_tty=True,
       parameters=[omo_r1_mcu_parameter],
       namespace='',
+      arguments=['--ros-args', '--log-level', 'info'],
     )
   ])
