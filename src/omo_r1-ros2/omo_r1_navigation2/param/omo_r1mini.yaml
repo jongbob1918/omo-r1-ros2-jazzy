@@ -93,16 +93,16 @@ controller_server:
       min_vel_y: 0.0
       max_vel_x: 0.3                   # 전진 최고 속도(m/s)
       max_vel_y: 0.0
-      max_vel_theta: 0.7
+      max_vel_theta: 0.6
       min_speed_xy: 0.0
       max_speed_xy: 0.4               # 평면 속도 제한값
       min_speed_theta: 0.0
-      acc_lim_x: 0.25                  # X축 가속도 제한 (실측 가속도에 맞춤)
+      acc_lim_x: 0.2                  # X축 가속도 제한 (실측 가속도에 맞춤)
       acc_lim_y: 0.0
       acc_lim_theta: 0.7
       decel_lim_x: -0.25               # X축 감속 제한 (급정지 허용 범위)
       decel_lim_y: 0.0
-      decel_lim_theta: -1.0
+      decel_lim_theta: -0.6
       vx_samples: 20                   # 속도 샘플 수(낮추면 연산량 감소)
       vy_samples: 5
       vtheta_samples: 20
@@ -115,7 +115,7 @@ controller_server:
       short_circuit_trajectory_evaluation: True
       stateful: True
       critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
-      BaseObstacle.scale: 0.02         # 장애물 패널티 가중치
+      BaseObstacle.scale: 0.04         # 장애물 패널티 가중치
       PathAlign.scale: 32.0            # 경로 정렬 가중치
       PathAlign.forward_point_distance: 0.1
       GoalAlign.scale: 24.0            # 목표 정렬 가중치
@@ -143,12 +143,12 @@ local_costmap:
       width: 5
       height: 5
       resolution: 0.05
-      footprint: '[[0.1, -0.28], [0.1, 0.28], [-0.47, 0.25], [-0.47, -0.25]]'  # 로봇 외곽선
+      footprint: '[[0.13, -0.32], [0.13, 0.32], [-0.42, 0.25], [-0.42, -0.25]]'
       plugins: ["obstacle_layer", "inflation_layer"]  # 2D LiDAR 사용 → obstacle + inflation 레이어만 유지
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0       # 비용 감소율
-        inflation_radius: 0.35         # 장애물 팽창 반경(좁을수록 가용 공간 확보)
+        inflation_radius: 0.5         # 장애물 팽창 반경(좁을수록 가용 공간 확보)
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
@@ -178,7 +178,7 @@ global_costmap:
       global_frame: map                # 전역 기준 프레임
       robot_base_frame: base_link
       use_sim_time: False
-      footprint: '[[0.1, -0.28], [0.1, 0.28], [-0.47, 0.25], [-0.47, -0.25]]'
+      footprint: '[[0.13, -0.32], [0.13, 0.32], [-0.42, 0.25], [-0.42, -0.25]]'
       resolution: 0.05                 # 지도 해상도(m)
       track_unknown_space: true        # 미탐색 공간을 Unknown으로 유지
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
@@ -198,7 +198,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.35         # 전역 지도 장애물 팽창 반경
+        inflation_radius: 0.5         # 전역 지도 장애물 팽창 반경
       always_send_full_costmap: True
   global_costmap_client:
     ros__parameters:
@@ -226,11 +226,27 @@ planner_server:
     use_sim_time: False
     planner_plugins: ["GridBased"]
     costmap_update_rate: 1.0
+    # GridBased:
+    #   plugin: "nav2_navfn_planner::NavfnPlanner"
+    #   tolerance: 0.5
+    #   use_astar: false
+    #   allow_unknown: true
     GridBased:
-      plugin: "nav2_navfn_planner::NavfnPlanner"
-      tolerance: 0.5
-      use_astar: false
-      allow_unknown: true
+      plugin: "nav2_smac_planner::SmacPlanner2D" # In Iron and older versions, "/" was used instead of "::"
+      tolerance: 0.125                      # tolerance for planning if unable to reach exact pose, in meters
+      downsample_costmap: false             # whether or not to downsample the map
+      downsampling_factor: 1                # multiplier for the resolution of the costmap layer (e.g. 2 on a 5cm costmap would be 10cm)
+      allow_unknown: true                   # allow traveling in unknown space
+      max_iterations: 1000000               # maximum total iterations to search for before failing (in case unreachable), set to -1 to disable
+      max_on_approach_iterations: 1000      # maximum number of iterations to attempt to reach goal once in tolerance
+      max_planning_time: 2.0                # max time in s for planner to plan, smooth
+      cost_travel_multiplier: 2.3           # Cost multiplier to apply to search to steer away from high cost areas. Larger values will place in the center of aisles more exactly (if non-`FREE` cost potential field exists) but take slightly longer to compute. To optimize for speed, a value of 1.0 is reasonable. A reasonable tradeoff value is 2.0. A value of 0.0 effective disables steering away from obstacles and acts like a naive binary search A*.
+      use_final_approach_orientation: false # Whether to set the final path pose at the goal's orientation to the requested orientation (false) or in line with the approach angle so the robot doesn't rotate to heading (true)
+      smoother:
+        max_iterations: 1000
+        w_smooth: 0.3
+        w_data: 0.2
+        tolerance: 1.0e-1
 
 planner_server_rclcpp_node:
   ros__parameters:
