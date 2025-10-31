@@ -12,6 +12,6 @@
     qos_overrides:
       /scan:
         subscription:
-          reliability: best_effort
+          reliability: reliable
           history: keep_last
           depth: 10
