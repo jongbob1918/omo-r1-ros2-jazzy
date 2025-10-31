@@ -1,12 +1,13 @@
+# ===== AMCL: LiDAR 기반 위치추정 =====
 amcl:
   ros__parameters:
-    use_sim_time: False
+    use_sim_time: False                # 시뮬레이션 시간을 쓰는 경우 true
     alpha1: 0.2
     alpha2: 0.2
     alpha3: 0.2
     alpha4: 0.2
     alpha5: 0.2
-    base_frame_id: "base_footprint"
+    base_frame_id: "base_footprint"    # 로봇 베이스 링크 이름
     beam_skip_distance: 0.5
     beam_skip_error_threshold: 0.9
     beam_skip_threshold: 0.3
@@ -18,9 +19,9 @@ amcl:
     laser_min_range: 0.12
     laser_model_type: "likelihood_field"
     max_beams: 60
-    max_particles: 2000
+    max_particles: 3000
     min_particles: 500
-    odom_frame_id: "odom"
+    odom_frame_id: "odom"              # 오도메트리 프레임 이름
     pf_err: 0.05
     pf_z: 0.99
     recovery_alpha_fast: 0.0
@@ -30,14 +31,16 @@ amcl:
     save_pose_rate: 0.5
     sigma_hit: 0.2
     tf_broadcast: true
-    transform_tolerance: 1.0
+    transform_tolerance: 1.0           # TF 지연 허용치(초) → 지연이 크면 0.3~0.5로 증가
     update_min_a: 0.2
     update_min_d: 0.25
     z_hit: 0.5
     z_max: 0.05
     z_rand: 0.5
     z_short: 0.05
-    scan_topic: scan_filtered
+    scan_topic: scan_filtered          # 필터 적용된 레이저 토픽
+    set_initial_pose: true             # 시작 시 초기 포즈 적용 여부
+    initial_pose: [0.0, 0.0, 0.0]      # AMCL 기본 초기 포즈 [x, y, yaw]
 
 amcl_map_client:
   ros__parameters:
@@ -72,12 +75,13 @@ bt_navigator_rclcpp_node:
   ros__parameters:
     use_sim_time: False
 
+# ===== Controller Server (DWB 로컬 플래너) =====
 controller_server:
   ros__parameters:
     use_sim_time: False
-    controller_frequency: 20.0
-    min_x_velocity_threshold: 0.001
-    min_y_velocity_threshold: 0.5
+    controller_frequency: 20.0         # 제어 루프 주기(Hz)
+    min_x_velocity_threshold: 0.001    # 이 값 미만 속도는 0으로 간주
+    min_y_velocity_threshold: 0.0      # 차륜 로봇은 Y축 움직임이 없어 0.0 유지
     min_theta_velocity_threshold: 0.001
     controller_plugins: ["FollowPath"]
 
@@ -85,90 +89,76 @@ controller_server:
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
       debug_trajectory_details: True
-      min_vel_x: -0.1
+      min_vel_x: 0.0
       min_vel_y: 0.0
-      max_vel_x: 0.2
+      max_vel_x: 0.3                   # 전진 최고 속도(m/s)
       max_vel_y: 0.0
-      max_vel_theta: 1.0
+      max_vel_theta: 0.7
       min_speed_xy: 0.0
-      max_speed_xy: 0.30
+      max_speed_xy: 0.4               # 평면 속도 제한값
       min_speed_theta: 0.0
-      acc_lim_x: 0.07
+      acc_lim_x: 0.25                  # X축 가속도 제한 (실측 가속도에 맞춤)
       acc_lim_y: 0.0
-      acc_lim_theta: 1.0
-      decel_lim_x: -0.07
+      acc_lim_theta: 0.7
+      decel_lim_x: -0.25               # X축 감속 제한 (급정지 허용 범위)
       decel_lim_y: 0.0
       decel_lim_theta: -1.0
-      vx_samples: 20
+      vx_samples: 20                   # 속도 샘플 수(낮추면 연산량 감소)
       vy_samples: 5
       vtheta_samples: 20
-      sim_time: 1.7
+      sim_time: 1.5                    # 짧은 예측 윈도로 민첩성 확보
       linear_granularity: 0.05
       angular_granularity: 0.025
-      transform_tolerance: 0.1 #0.2
-      xy_goal_tolerance: 0.05 #0.25
-      trans_stopped_velocity: 0.25
+      transform_tolerance: 0.1 #0.2    # TF 지연 허용치(초)
+      xy_goal_tolerance: 0.15          # 목표 위치 허용 오차(진동 완화)
+      trans_stopped_velocity: 0.05     # 이 값 이하 속도면 정지로 판단
       short_circuit_trajectory_evaluation: True
       stateful: True
       critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
-      BaseObstacle.scale: 0.02
-      PathAlign.scale: 32.0
+      BaseObstacle.scale: 0.02         # 장애물 패널티 가중치
+      PathAlign.scale: 32.0            # 경로 정렬 가중치
       PathAlign.forward_point_distance: 0.1
-      GoalAlign.scale: 24.0
+      GoalAlign.scale: 24.0            # 목표 정렬 가중치
       GoalAlign.forward_point_distance: 0.1
-      PathDist.scale: 32.0
-      GoalDist.scale: 24.0
-      RotateToGoal.scale: 32.0
-      RotateToGoal.slowing_factor: 5.0
-      RotateToGoal.lookahead_time: -1.0
+      PathDist.scale: 32.0             # 경로 거리 가중치
+      GoalDist.scale: 24.0             # 목표 거리 가중치
+      RotateToGoal.scale: 32.0         # 회전 비용 가중치
+      RotateToGoal.slowing_factor: 5.0 # 목표 근접 시 감속 계수
+      RotateToGoal.lookahead_time: -1.0  # 회전 목표 예측 시간(음수면 자동)
 
 controller_server_rclcpp_node:
   ros__parameters:
     use_sim_time: False
 
+# ===== Local Costmap (로봇 주변 지도) =====
 local_costmap:
   local_costmap:
     ros__parameters:
-      update_frequency: 5.0
-      publish_frequency: 2.0
-      global_frame: odom
-      robot_base_frame: base_link
+      update_frequency: 10.0           # 지역 비용지도 갱신 주기(Hz)
+      publish_frequency: 5.0           # 지역 비용지도 발행 주기(Hz)
+      global_frame: odom               # 지역지도 기준 좌표계
+      robot_base_frame: base_link      # 로봇 베이스 프레임
       use_sim_time: False
       rolling_window: true
-      width: 3
-      height: 3
+      width: 5
+      height: 5
       resolution: 0.05
-      robot_radius: 0.150
-      plugins: ["obstacle_layer", "voxel_layer", "inflation_layer"]
+      footprint: '[[0.1, -0.28], [0.1, 0.28], [-0.47, 0.25], [-0.47, -0.25]]'  # 로봇 외곽선
+      plugins: ["obstacle_layer", "inflation_layer"]  # 2D LiDAR 사용 → obstacle + inflation 레이어만 유지
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.0
+        cost_scaling_factor: 3.0       # 비용 감소율
+        inflation_radius: 0.35         # 장애물 팽창 반경(좁을수록 가용 공간 확보)
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
-        observation_sources: scan
+        observation_sources: scan      # 장애물 레이어 센서 소스
         scan:
-          topic: scan_filtered
-          max_obstacle_height: 2.0
-          clearing: True
-          marking: True
+          topic: scan_filtered         # 레이저 필터 출력 토픽
+          max_obstacle_height: 2.0     # 장애물로 보는 최대 높이
+          clearing: True               # 센서로 장애물 제거
+          marking: True                # 센서로 장애물 등록
           data_type: "LaserScan"
-      voxel_layer:
-        plugin: "nav2_costmap_2d::VoxelLayer"
-        enabled: True
-        publish_voxel_map: True
-        origin_z: 0.0
-        z_resolution: 0.05
-        z_voxels: 16
-        max_obstacle_height: 2.0
-        mark_threshold: 0
-        observation_sources: pointcloud
-        pointcloud:
-          topic: /intel_realsense_r200_depth/points
-          max_obstacle_height: 2.0
-          clearing: True
-          marking: True
-          data_type: "PointCloud2"
       static_layer:
         map_subscribe_transient_local: True
       always_send_full_costmap: True
@@ -179,48 +169,36 @@ local_costmap:
     ros__parameters:
       use_sim_time: False
 
+# ===== Global Costmap (지도 좌표계) =====
 global_costmap:
   global_costmap:
     ros__parameters:
-      update_frequency: 1.0
-      publish_frequency: 1.0
-      global_frame: map
+      update_frequency: 1.0           # 전역 비용지도 갱신 주기(Hz)
+      publish_frequency: 1.0           # 전역 비용지도 발행 주기(Hz)
+      global_frame: map                # 전역 기준 프레임
       robot_base_frame: base_link
       use_sim_time: False
-      robot_radius: 0.150
-      resolution: 0.05
-      plugins: ["static_layer", "obstacle_layer", "voxel_layer", "inflation_layer"]
+      footprint: '[[0.1, -0.28], [0.1, 0.28], [-0.47, 0.25], [-0.47, -0.25]]'
+      resolution: 0.05                 # 지도 해상도(m)
+      track_unknown_space: true        # 미탐색 공간을 Unknown으로 유지
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
-        observation_sources: scan
+        observation_sources: scan      # 레이저 기반 장애물 레이어
         scan:
           topic: scan_filtered
           max_obstacle_height: 2.0
           clearing: True
           marking: True
           data_type: "LaserScan"
-      voxel_layer:
-        plugin: "nav2_costmap_2d::VoxelLayer"
-        enabled: True
-        publish_voxel_map: True
-        origin_z: 0.0
-        z_resolution: 0.05
-        z_voxels: 16
-        max_obstacle_height: 2.0
-        mark_threshold: 0
-        observation_sources: pointcloud
-        pointcloud:
-          topic: /intel_realsense_r200_depth/points
-          max_obstacle_height: 2.0
-          clearing: True
-          marking: True
-          data_type: "PointCloud2"
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: True
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
+        cost_scaling_factor: 3.0
+        inflation_radius: 0.35         # 전역 지도 장애물 팽창 반경
       always_send_full_costmap: True
   global_costmap_client:
     ros__parameters:
@@ -232,20 +210,22 @@ global_costmap:
 map_server:
   ros__parameters:
     use_sim_time: False
-    yaml_filename: "maps.yaml"
+    yaml_filename: ""
 
 map_saver:
   ros__parameters:
     use_sim_time: False
-    save_map_timeout: 5000
+    save_map_timeout: 5.0
     free_thresh_default: 0.25
     occupied_thresh_default: 0.65
+    map_subscribe_transient_local: True
 
 planner_server:
   ros__parameters:
     expected_planner_frequency: 20.0
     use_sim_time: False
     planner_plugins: ["GridBased"]
+    costmap_update_rate: 1.0
     GridBased:
       plugin: "nav2_navfn_planner::NavfnPlanner"
       tolerance: 0.5
@@ -277,31 +257,32 @@ recoveries_server:
     min_rotational_vel: 0.4
     rotational_acc_lim: 1.0 #3.2
 
+# ===== Collision Monitor (근접 충돌 감시) =====
 collision_monitor:
   ros__parameters:
-    base_frame_id: "base_footprint"
+    base_frame_id: "base_footprint"    # 충돌 판정 기준 프레임
     odom_frame_id: "odom"
     cmd_vel_in_topic: "cmd_vel_smoothed"
     cmd_vel_out_topic: "cmd_vel"
     state_topic: "collision_monitor_state"
-    transform_tolerance: 0.2
-    source_timeout: 1.0
-    base_shift_correction: True
-    stop_pub_timeout: 2.0
-    polygons: ["FootprintApproach"]
+    transform_tolerance: 0.2           # TF 지연 허용치
+    source_timeout: 1.0                # 센서 토픽 시간 초과
+    base_shift_correction: True        # 베이스 오프셋 보정
+    stop_pub_timeout: 2.0              # 정지 명령 유지 시간
+    polygons: ["FootprintApproach"]    # 감시 폴리곤 목록(비우면 비활성화)
     FootprintApproach:
       type: "polygon"
-      action_type: "approach"
+      action_type: "approach"          # 추돌 예측 시 감속/정지
       footprint_topic: "local_costmap/published_footprint"
-      time_before_collision: 1.2
+      time_before_collision: 1.2       # 충돌 예상 시간(초)
       simulation_time_step: 0.1
       min_points: 6
       visualize: False
       enabled: True
-    observation_sources: ["scan"]
+    observation_sources: ["scan"]      # 감시 센서 목록
     scan:
       type: "scan"
-      topic: "scan_filtered"
+      topic: "scan_filtered"           # 레이저 필터 출력 (QoS: Reliable 권장)
       min_height: 0.15
       max_height: 2.0
       enabled: True
@@ -309,3 +290,32 @@ collision_monitor:
 robot_state_publisher:
   ros__parameters:
     use_sim_time: False
+
+docking_server:
+  ros__parameters:
+    controller_frequency: 50.0
+    initial_perception_timeout: 5.0
+    wait_charge_timeout: 5.0
+    dock_approach_timeout: 30.0
+    undock_linear_tolerance: 0.05
+    undock_angular_tolerance: 0.1
+    max_retries: 3
+    base_frame: "base_link"
+    fixed_frame: "odom"
+    dock_backwards: false
+    dock_prestaging_tolerance: 0.5
+    dock_plugins: ['simple_charging_dock']
+    simple_charging_dock:
+      plugin: 'opennav_docking::SimpleChargingDock'
+      docking_threshold: 0.05
+      staging_x_offset: -0.7
+      use_external_detection_pose: false
+      use_battery_status: false
+      use_stall_detection: false
+      external_detection_timeout: 1.0
+      external_detection_translation_x: -0.18
+      external_detection_translation_y: 0.0
+      external_detection_rotation_roll: -1.57
+      external_detection_rotation_pitch: -1.57
+      external_detection_rotation_yaw: 0.0
+      filter_coef: 0.1
