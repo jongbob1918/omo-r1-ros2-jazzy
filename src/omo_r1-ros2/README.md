@@ -1,6 +1,6 @@
 # ROS2 packages for omorobot r1 mini
 
-This project is to demonstrate R1mini control and navigation in ROS2-foxy environment.  
+This project is to demonstrate R1mini control and navigation in ROS2-jazzy environment.  
 한국어 사용자는 다음 **한국어**[문서](README_KR.md)를 참조하십시오.  
 
 ## Build source
@@ -9,7 +9,7 @@ This project is to demonstrate R1mini control and navigation in ROS2-foxy enviro
 
 ```bash
   cd {$workspace_path}/src/
-  git clone https://github.com/omorobot/omo_r1mini-foxy.git
+  git clone https://github.com/omorobot/omo_r1mini-jazzy.git
   git clone https://github.com/PinkWink/YDLidar-SDK.git
   git clone https://github.com/PinkWink/ydlidar_ros2_driver.git
 ```
@@ -28,13 +28,13 @@ This project is to demonstrate R1mini control and navigation in ROS2-foxy enviro
 
 Following additional packages may be reuqired to be installed.  
 - gazebo 
-- ros-foxy-gazebo-ros-pkgs
+- ros-jazzy-gazebo-ros-pkgs
 - cartographer-ros  
 - nav2_map_server
 - pyserial
 
 ```bash
-sudo apt install -y ros-foxy-gazebo-ros ros-foxy-cartographer-ros ros-foxy-nav2-map-server ros-foxy-gazebo-ros-pkgs
+sudo apt install -y ros-jazzy-gazebo-ros ros-jazzy-cartographer-ros ros-jazzy-nav2-map-server ros-jazzy-gazebo-ros-pkgs
 
 pip install pyserial
 ```

@@ -7,7 +7,7 @@
 workspace_path 는 ros2의 작업공간입니다(workspace) 
 ```bash
   cd {$workspace_path}/src/
-  git clone https://github.com/omorobot/omo_r1-foxy.git
+  git clone https://github.com/omorobot/omo_r1-jazzy.git
   git clone https://github.com/PinkWink/YDLidar-SDK.git
   git clone https://github.com/PinkWink/ydlidar_ros2_driver.git
 ```
@@ -25,18 +25,18 @@ workspace_path 는 ros2의 작업공간입니다(workspace)
 
 다음 패키지들이 필요할 수 있습니다.  
 - gazebo 
-- ros-foxy-gazebo-ros-pkgs
+- ros-jazzy-gazebo-ros-pkgs
 - cartographer-ros  
 - nav2_map_server
 - nav2_bringup
 - pyserial : 파이썬에서 serial을 import하기 위함
 
 ```bash
-sudo apt install -y ros-foxy-gazebo-ros\
- ros-foxy-cartographer-ros\
- ros-foxy-nav2-map-server\
- ros-foxy-gazebo-ros-pkgs\
- ros-foxy-nav2-bringup
+sudo apt install -y ros-jazzy-gazebo-ros\
+ ros-jazzy-cartographer-ros\
+ ros-jazzy-nav2-map-server\
+ ros-jazzy-gazebo-ros-pkgs\
+ ros-jazzy-nav2-bringup
 
 pip install pyserial
 ```

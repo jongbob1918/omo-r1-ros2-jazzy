@@ -6,7 +6,7 @@
 
 ## 프로젝트 구조 및 모듈 구성
 - `omo_r1-ros2`: ROS 2 Jazzy에서 주행하도록 직접 포팅한 워크스페이스이며 `omo_r1_bringup`, `omo_r1_navigation2`, `omo_r1_cartographer`, `omo_r1_description`, `omo_r1_gazebo` 패키지를 묶습니다.
-- `omo_r1-ros2-origin-folder`: 공식 배포본(Foxy 기준) 아카이브이므로 Jazzy 마이그레이션 비교용으로만 사용합니다.
+- `omo_r1-ros2-origin-folder`: 공식 배포본(jazzy 기준) 아카이브이므로 Jazzy 마이그레이션 비교용으로만 사용합니다.
 - `vicpinky-project-tuning`: 외부 파트너 패키지로 Jazzy 호환, LiDAR 예외 처리, Nav2 튜닝 사례가 정리돼 있습니다. LiDAR 오류 대응과 경로 계획 검증은 이 폴더의 `vicpinky_bringup`, `vicpinky_navigation`을 먼저 참고하세요.
 - 벤더 드라이버(`ydlidar_sdk`, `ydlidar_ros2_driver`)는 워크스페이스 루트에 보관하며, 업데이트 시 상위 저장소 커밋 해시와 변경 이유를 기록합니다.
 
@@ -18,7 +18,7 @@
 
 ## 코딩 스타일 및 네이밍 규칙
 - Python 노드는 4칸 들여쓰기와 snake_case 파일명, `rclpy.logging` 기반 로그를 유지합니다.
-- 런치 파일은 `<기능>.launch.py` 규칙을 지키고, Jazzy 포팅 시 Foxy 전용 API 호출은 `vicpinky-project-tuning` 예제처럼 래핑합니다.
+- 런치 파일은 `<기능>.launch.py` 규칙을 지키고, Jazzy 포팅 시 jazzy 전용 API 호출은 `vicpinky-project-tuning` 예제처럼 래핑합니다.
 - 파라미터·설정은 `config/` 또는 `param/` 디렉터리에 YAML로 분리하고, 변경 시 `package.xml`, `CMakeLists.txt`(또는 `setup.py`) 설치 규칙을 즉시 갱신합니다.
 - LiDAR 예외 처리나 Nav2 튜닝은 `vicpinky_navigation`의 파라미터 패턴을 재사용하고, 커스텀 예외는 명시적 메시지와 재시도 간격을 주석으로 남깁니다.
 
@@ -32,7 +32,7 @@
 - 커밋 메시지는 `[영역] 요약` 형식을 유지합니다. 예: `[nav2] tune obstacle params for jazzy`.
 - Jazzy 호환 작업은 `omo_r1-ros2`와 `vicpinky-project-tuning` 변경을 분리 커밋으로 제출하고, `omo_r1-ros2-origin-folder`는 비교 스크린샷·Diff 링크만 첨부합니다.
 - PR에는 실행한 빌드·테스트 명령, 참고한 지도·bag 링크, LiDAR 예외 처리 결과(로그·스크린샷)를 포함하세요.
-- 리뷰 요청 시 영향 패키지 담당자와 파트너 협업자를 지정하고, Jazzy/Foxy 행동 차이를 bullet로 정리합니다.
+- 리뷰 요청 시 영향 패키지 담당자와 파트너 협업자를 지정하고, Jazzy/jazzy 행동 차이를 bullet로 정리합니다.
 
 ## 보안 및 구성 팁
 - USB 규칙 변경 후 `sudo sh create_udev_rules.sh`를 재실행해 권한을 갱신합니다.
