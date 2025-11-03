@@ -20,7 +20,7 @@ def generate_launch_description():
     tb3_param_dir = LaunchConfiguration(
         'tb3_param_dir',
         default=os.path.join(
-            get_package_share_directory('omo_r1_bringup'),'param/omo_r1mini.yaml'))
+            get_package_share_directory('omo_r1_bringup'),'param/nav2_params.yaml'))
 
     omo_r1_description_dir = LaunchConfiguration(
         'omo_r1_description_dir',

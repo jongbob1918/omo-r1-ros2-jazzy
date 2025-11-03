@@ -11,7 +11,18 @@
   <maintainer email="kyuhyong@gmail.com">Kyuhyong You</maintainer>
   <author email="bishopearson@gmail.com">Bishop Pearson</author>
   <buildtool_depend>ament_cmake</buildtool_depend>
-  <exec_depend>nav2_bringup</exec_depend>
+  <depend>slam_toolbox</depend>
+  <depend>navigation2</depend>
+  <depend>nav2_bringup</depend>
+
+  <!-- Leading Server Dependencies -->
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav2_msgs</depend>
+  <depend>action_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>cv_bridge</depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>
