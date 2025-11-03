@@ -99,8 +99,82 @@ controller_server:
       yaw_goal_tolerance: 0.2    # (예시) 0.2 라디안 (약 11.5도)
       stateful: True
 
-    # DWB parameters
+    #localplanner parameters
     FollowPath:
+      # plugin: "nav2_mppi_controller::MPPIController"
+        
+      #   # 1. 샘플링 및 예측: 좁은 공간 대응력 향상
+      # time_steps: 42              # 2.1초 예측 (42 * 0.05s)
+      # model_dt: 0.05              # 컨트롤러 주기(1/20Hz)와 일치
+      # batch_size: 2000            # 더 많은 경로를 탐색하여 좁은 공간에서 최적 경로를 찾을 확률 증가
+      # iteration_count: 1
+      
+      # # 2. 로봇 기구학 (사용자 로봇에 맞게 수정 필요)
+      # vx_max: 0.7                # 최대 속도는 약간 보수적으로 시작
+      # vx_min: -0.15               # 후진 속도
+      # wz_max: 0.8                 # 최대 회전 속도
+      # ax_max: 2.0
+      # ax_min: -0.8
+      # az_max: 2.0
+      # motion_model: "DiffDrive"   
+
+      # # 3. 경로 추종 관련
+      # transform_tolerance: 0.2
+      # prune_distance: 2.0         # 예측 거리보다 약간 길게 설정
+
+      # # 4. 시각화 (튜닝 시 필수!)
+      # visualize: true
+
+      # # 5. Critic (평가 함수) 설정 - 좁은 공간 주행 최적화
+      # critics: ["ConstraintCritic", "CostCritic", "GoalCritic", "GoalAngleCritic", "PathAlignCritic", "PathFollowCritic", "PreferForwardCritic"]
+      
+      # ConstraintCritic:
+      #   enabled: true
+      #   cost_power: 1
+      #   cost_weight: 5.0
+
+      # GoalCritic:
+      #   enabled: true
+      #   cost_power: 1
+      #   cost_weight: 4.0
+      #   threshold_to_consider: 1.2
+
+      # GoalAngleCritic:
+      #   enabled: true
+      #   cost_power: 1
+      #   cost_weight: 2.5
+      #   threshold_to_consider: 0.6
+
+      # PreferForwardCritic:
+      #   enabled: true
+      #   cost_power: 2
+      #   cost_weight: 10.0
+      #   threshold_to_consider: 0.6
+      
+      # # ⭐ 핵심: 장애물 회피 Critic
+      # CostCritic:
+      #   enabled: true
+      #   cost_power: 1
+      #   cost_weight: 2.5          # 경로 추종보다 가중치를 높여 장애물 회피를 우선시
+      #   critical_cost: 300.0      # 이 비용 이상의 경로는 심한 페널티 부여
+      #   consider_footprint: true  # ⭐ 직사각형 로봇이므로 반드시 true로 설정!
+      #   collision_cost: 10000.0 # 충돌 경로에 대한 비용
+      #   near_goal_distance: 0.4
+        
+      # # ⭐ 핵심: 경로 추종 Critic
+      # PathAlignCritic:            
+      #   enabled: true
+      #   cost_power: 1
+      #   cost_weight: 170.0          # 장애물 회피를 위해 약간 낮은 가중치 부여
+      #   threshold_to_consider: 0.5
+      #   max_path_occupancy_ratio: 0.1 # 경로 주변에 장애물이 많아도 경로를 따르도록 허용
+        
+      # PathFollowCritic:
+      #   enabled: true
+      #   cost_power: 1
+      #   cost_weight: 4.0          # PathAlign과 유사한 가중치로 시작
+      #   threshold_to_consider: 1.2
+
       plugin: "dwb_core::DWBLocalPlanner"
       debug_trajectory_details: True
       min_vel_x: 0.0
@@ -130,15 +204,16 @@ controller_server:
       stateful: True
       critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
       BaseObstacle.scale: 0.04         # 장애물 패널티 가중치
-      PathAlign.scale: 25.0            # 경로 정렬 가중치
+      PathAlign.scale: 20.0            # 경로 정렬 가중치
       PathAlign.forward_point_distance: 0.2
       GoalAlign.scale: 24.0            # 목표 정렬 가중치
       GoalAlign.forward_point_distance: 0.1
-      PathDist.scale: 25.0             # 경로 거리 가중치
+      PathDist.scale: 20.0             # 경로 거리 가중치
       GoalDist.scale: 24.0             # 목표 거리 가중치
       RotateToGoal.scale: 32.0         # 회전 비용 가중치
       RotateToGoal.slowing_factor: 5.0 # 목표 근접 시 감속 계수
       RotateToGoal.lookahead_time: -1.0  # 회전 목표 예측 시간(음수면 자동)
+
 
 controller_server_rclcpp_node:
   ros__parameters:
@@ -148,34 +223,47 @@ controller_server_rclcpp_node:
 local_costmap:
   local_costmap:
     ros__parameters:
-      update_frequency: 20.0           # 지역 비용지도 갱신 주기(Hz)
-      publish_frequency: 5.0           # 지역 비용지도 발행 주기(Hz)
-      global_frame: odom               # 지역지도 기준 좌표계
-      robot_base_frame: base_link      # 로봇 베이스 프레임
-      use_sim_time: False
-      rolling_window: true
-      width: 5
-      height: 5
-      resolution: 0.05
+      update_frequency: 10.0                        # 비용 지도 업데이트 주기(Hz)
+      publish_frequency: 5.0                        # 비용 지도 발행 주기(Hz)
+      global_frame: odom                            # 지역 지도의 기준이 될 전역 좌표계 (보통 'odom')
+      robot_base_frame: base_link                   # 로봇의 베이스 좌표계
+      use_sim_time: False                           # 시뮬레이션 시간 사용 여부
+      rolling_window: true                          # 로봇을 중심으로 지도가 움직이는 '롤링 윈도우' 방식 사용 여부
+      width: 5                                      # 지도 너비(미터)
+      height: 5                                     # 지도 높이(미터)
+      resolution: 0.05                              # 지도 해상도(미터/셀)
       footprint: '[[0.13, -0.32], [0.13, 0.32], [-0.42, 0.25], [-0.42, -0.25]]'
-      plugins: ["obstacle_layer", "inflation_layer"]  # 2D LiDAR 사용 → obstacle + inflation 레이어만 유지
+      footprint_padding: 0.02                       # footprint 주변의 여유 공간
+      plugins: ["voxel_layer", "inflation_layer"]   # 사용할 비용 지도 레이어 플러그인 목록
       inflation_layer:
-        plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.0       # 비용 감소율
-        inflation_radius: 0.35         # 장애물 팽창 반경(좁을수록 가용 공간 확보)
-      obstacle_layer:
-        plugin: "nav2_costmap_2d::ObstacleLayer"
-        enabled: True
-        observation_sources: scan      # 장애물 레이어 센서 소스
+        plugin: "nav2_costmap_2d::InflationLayer"   # 장애물 주변에 팽창 영역(비용 증가)을 만드는 레이어
+        cost_scaling_factor: 3.0                    # 팽창 비용 감소 계수
+        inflation_radius: 0.45                     # 장애물로부터 팽창시킬 반경(미터)
+      voxel_layer:
+        plugin: "nav2_costmap_2d::VoxelLayer"       # 3D 포인트 클라우드 데이터를 2D 비용 지도에 투영하는 레이어
+        enabled: True                               # 활성화 여부
+        publish_voxel_map: True                     # Voxel 지도 발행 여부
+        origin_z: 0.0                               # z축 원점
+        z_resolution: 0.05                          # z축 해상도
+        z_voxels: 16                                # z축 복셀 개수
+        max_obstacle_height: 2.0                    # 장애물로 인식할 최대 높이(미터)
+        mark_threshold: 0                           # 장애물로 표시할 셀의 최소 포인트 수
+        observation_sources: scan                   # 센서 데이터 소스 이름
         scan:
-          topic: scan_filtered         # 레이저 필터 출력 토픽
-          max_obstacle_height: 2.0     # 장애물로 보는 최대 높이
-          clearing: True               # 센서로 장애물 제거
-          marking: True                # 센서로 장애물 등록
-          data_type: "LaserScan"
+          topic: /scan_filtered                     # 사용할 센서 토픽
+          max_obstacle_height: 2.0                  # 장애물로 처리할 최대 높이
+          clearing: True                            # 센서 데이터로 장애물이 없어진 영역을 지도에서 제거할지 여부
+          marking: True                             # 센서 데이터로 장애물이 감지된 영역을 지도에 표시할지 여부
+          data_type: "LaserScan"                    # 센서 데이터 타입
+          raytrace_max_range: 5.0                   # 장애물 제거를 위한 레이저 최대 추적 거리
+          raytrace_min_range: 0.0                   # 장애물 제거를 위한 레이저 최소 추적 거리
+          obstacle_max_range: 4.5                   # 장애물 표시를 위한 레이저 최대 거리
+          obstacle_min_range: 0.0                   # 장애물 표시를 위한 레이저 최소 거리
       static_layer:
-        map_subscribe_transient_local: True
-      always_send_full_costmap: True
+        plugin: "nav2_costmap_2d::StaticLayer"      # 정적 지도 레이어 (보통 전역 비용 지도에서 사용)
+        map_subscribe_transient_local: True         # 지도 토픽에 대해 transient local QoS 사용
+      always_send_full_costmap: True                # 항상 전체 비용 지도를 발행할지 여부
+
   local_costmap_client:
     ros__parameters:
       use_sim_time: False
@@ -246,21 +334,43 @@ planner_server:
     #   use_astar: false
     #   allow_unknown: true
     GridBased:
-      plugin: "nav2_smac_planner::SmacPlanner2D" # In Iron and older versions, "/" was used instead of "::"
-      tolerance: 0.125                      # tolerance for planning if unable to reach exact pose, in meters
-      downsample_costmap: false             # whether or not to downsample the map
-      downsampling_factor: 1                # multiplier for the resolution of the costmap layer (e.g. 2 on a 5cm costmap would be 10cm)
-      allow_unknown: true                   # allow traveling in unknown space
-      max_iterations: 1000000               # maximum total iterations to search for before failing (in case unreachable), set to -1 to disable
-      max_on_approach_iterations: 1000      # maximum number of iterations to attempt to reach goal once in tolerance
-      max_planning_time: 2.0                # max time in s for planner to plan, smooth
-      cost_travel_multiplier: 2.3           # Cost multiplier to apply to search to steer away from high cost areas. Larger values will place in the center of aisles more exactly (if non-`FREE` cost potential field exists) but take slightly longer to compute. To optimize for speed, a value of 1.0 is reasonable. A reasonable tradeoff value is 2.0. A value of 0.0 effective disables steering away from obstacles and acts like a naive binary search A*.
-      use_final_approach_orientation: false # Whether to set the final path pose at the goal's orientation to the requested orientation (false) or in line with the approach angle so the robot doesn't rotate to heading (true)
+      plugin: "nav2_smac_planner::SmacPlannerHybrid" # In Iron and older versions, "/" was used instead of "::"
+      downsample_costmap: false           # whether or not to downsample the map
+      downsampling_factor: 1              # multiplier for the resolution of the costmap layer (e.g. 2 on a 5cm costmap would be 10cm)
+      tolerance: 0.15                     # dist-to-goal heuristic cost (distance) for valid tolerance endpoints if exact goal cannot be found.
+      allow_unknown: true                 # allow traveling in unknown space
+      max_iterations: 1000000             # maximum total iterations to search for before failing (in case unreachable), set to -1 to disable
+      max_on_approach_iterations: 1000    # Maximum number of iterations after within tolerances to continue to try to find exact solution
+      max_planning_time: 5.0              # max time in s for planner to plan, smooth
+      motion_model_for_search: "REEDS_SHEPP"    # Hybrid-A* Dubin, Redds-Shepp
+      angle_quantization_bins: 72         # Number of angle bins for search
+      analytic_expansion_ratio: 3.5       # The ratio to attempt analytic expansions during search for final approach.
+      analytic_expansion_max_length: 3.0  # For Hybrid/Lattice nodes: The maximum length of the analytic expansion to be considered valid to prevent unsafe shortcutting
+      analytic_expansion_max_cost: 200.0  # The maximum single cost for any part of an analytic expansion to contain and be valid, except when necessary on approach to goal
+      analytic_expansion_max_cost_override: false  #  Whether or not to override the maximum cost setting if within critical distance to goal (ie probably required)
+      minimum_turning_radius: 0.2        # minimum turning radius in m of path / vehicle
+      reverse_penalty: 2.5            # Penalty to apply if motion is reversing, must be => 1
+      change_penalty: 0.0                 # Penalty to apply if motion is changing directions (L to R), must be >= 0
+      non_straight_penalty: 1.1          # Penalty to apply if motion is non-straight, must be => 1
+      cost_penalty: 1.5         # Penalty to apply to higher cost areas when adding into the obstacle map dynamic programming distance expansion heuristic. This drives the robot more towards the center of passages. A value between 1.3 - 3.5 is reasonable.
+      retrospective_penalty: 0.015
+      lookup_table_size: 20.0             # Size of the dubin/reeds-sheep distance window to cache, in meters.
+      cache_obstacle_heuristic: false     # Cache the obstacle map dynamic programming distance expansion heuristic between subsequent replannings of the same goal location. Dramatically speeds up replanning performance (40x) if costmap is largely static.
+      debug_visualizations: true         # For Hybrid nodes: Whether to publish expansions on the /expansions topic as an array of poses (the orientation has no meaning) and the path's footprints on the /planned_footprints topic. WARNING: heavy to compute and to display, for debug only as it degrades the performance.
+      use_quadratic_cost_penalty: False
+      downsample_obstacle_heuristic: True
+      allow_primitive_interpolation: False
+      coarse_search_resolution: 4         # Number of bins to skip when doing a coarse search for the path. Only used for all_direction goal heading mode.
+      goal_heading_mode: "DEFAULT"        # DEFAULT, BIDIRECTIONAL, ALL_DIRECTION
+      smooth_path: True                   # If true, does a simple and quick smoothing post-processing to the path
+
       smoother:
         max_iterations: 1000
         w_smooth: 0.3
         w_data: 0.2
-        tolerance: 1.0e-1
+        tolerance: 1.0e-10
+        do_refinement: true
+        refinement_num: 2
 
 planner_server_rclcpp_node:
   ros__parameters:
