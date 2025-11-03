@@ -31,7 +31,7 @@ amcl:
     save_pose_rate: 0.5
     sigma_hit: 0.2
     tf_broadcast: true
-    transform_tolerance: 1.0           # TF 지연 허용치(초) → 지연이 크면 0.3~0.5로 증가
+    transform_tolerance: 0.3          # TF 지연 허용치(초) → 지연이 크면 0.3~0.5로 증가
     update_min_a: 0.2
     update_min_d: 0.25
     z_hit: 0.5
@@ -79,7 +79,7 @@ bt_navigator_rclcpp_node:
 controller_server:
   ros__parameters:
     use_sim_time: False
-    controller_frequency: 30.0         # 제어 루프 주기(Hz)
+    controller_frequency: 20.0         # 제어 루프 주기(Hz)
     min_x_velocity_threshold: 0.001    # 이 값 미만 속도는 0으로 간주
     min_y_velocity_threshold: 0.0      # 차륜 로봇은 Y축 움직임이 없어 0.0 유지
     min_theta_velocity_threshold: 0.001
@@ -134,7 +134,7 @@ controller_server_rclcpp_node:
 local_costmap:
   local_costmap:
     ros__parameters:
-      update_frequency: 10.0           # 지역 비용지도 갱신 주기(Hz)
+      update_frequency: 20.0           # 지역 비용지도 갱신 주기(Hz)
       publish_frequency: 5.0           # 지역 비용지도 발행 주기(Hz)
       global_frame: odom               # 지역지도 기준 좌표계
       robot_base_frame: base_link      # 로봇 베이스 프레임
@@ -309,7 +309,7 @@ robot_state_publisher:
 
 docking_server:
   ros__parameters:
-    controller_frequency: 50.0
+    controller_frequency: 20.0
     initial_perception_timeout: 5.0
     wait_charge_timeout: 5.0
     dock_approach_timeout: 30.0
