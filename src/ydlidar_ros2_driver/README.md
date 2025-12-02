@@ -1,5 +1,5 @@
 ![YDLIDAR](images/YDLidar.jpg  "YDLIDAR")
-# YDLIDAR ROS2 Driver
+# YDLIDAR ROS2 jazzy Driver
 
 ydlidar_ros2_driver is a new ros package, which is designed to gradually become the standard driver package for ydlidar devices in the ros2 environment.
 
